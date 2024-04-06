@@ -9,53 +9,48 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    @State private var selectedTab = 1
+    
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        
+        ZStack {
+            TabView(selection: $selectedTab) {
+                Text("Calendar")
+                    .tabItem {
+                        Label("Calendar", systemImage: "calendar")
                     }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                
+                Phases()
+                    .tag(1)
+                    .tabItem {
+                        Label("Daylight Phases", systemImage: "house.fill")
                     }
+                
+                VStack {
+                    Text("Heading")
+                        .font(.custom("AntiqueSerie-Regular", size: 24))
+                    Text("The quick brown fox jumps over the lazy dog and runs away.")
+                        .font(.wittgenstein(size: 16, width: 100, weight: 200))
+                }
+                .tabItem {
+                    Label("Feed", systemImage: "square.stack.fill")
                 }
             }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+            
+            HStack {
+                Label("Vizor", systemImage: "dot.viewfinder")
+                    .font(.bricolageGrotesque(size: 24, width: 100, weight: 600))
+                    .bold()
+                    .padding()
+                
+                Spacer()
             }
+            .offset(x: 0, y: -350)
         }
     }
+    
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
