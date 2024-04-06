@@ -22,6 +22,15 @@ struct VizorApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+ 
+//    init() {
+//        for family in UIFont.familyNames {
+//            print("Family: \(family)")
+//            for name in UIFont.fontNames(forFamilyName: family) {
+//                print("   - \(name)")
+//            }
+//        }
+//    }
 
     var body: some Scene {
         WindowGroup {
@@ -30,3 +39,4 @@ struct VizorApp: App {
         .modelContainer(sharedModelContainer)
     }
 }
+

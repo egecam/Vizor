@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D45A2AEC2BB35A2A009ABEF2 /* Phases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */; };
+		D4B8094D2BC1744D008987FB /* CubeRotationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8094C2BC1744D008987FB /* CubeRotationModifier.swift */; };
 		D4FE4A352BB20059001B7AC9 /* VizorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A342BB20059001B7AC9 /* VizorApp.swift */; };
 		D4FE4A372BB20059001B7AC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A362BB20059001B7AC9 /* ContentView.swift */; };
 		D4FE4A392BB20059001B7AC9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A382BB20059001B7AC9 /* Item.swift */; };
@@ -15,6 +17,12 @@
 		D4FE4A482BB2005B001B7AC9 /* VizorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A472BB2005B001B7AC9 /* VizorTests.swift */; };
 		D4FE4A522BB2005B001B7AC9 /* VizorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A512BB2005B001B7AC9 /* VizorUITests.swift */; };
 		D4FE4A542BB2005B001B7AC9 /* VizorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A532BB2005B001B7AC9 /* VizorUITestsLaunchTests.swift */; };
+		D4FE4A7A2BB221A4001B7AC9 /* VFont in Frameworks */ = {isa = PBXBuildFile; productRef = D4FE4A792BB221A4001B7AC9 /* VFont */; };
+		D4FE4A802BB22A38001B7AC9 /* AntiqueSerie.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4FE4A7F2BB22A38001B7AC9 /* AntiqueSerie.otf */; };
+		D4FE4A822BB22BB0001B7AC9 /* BricolageGrotesque.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4FE4A812BB22BB0001B7AC9 /* BricolageGrotesque.ttf */; };
+		D4FE4A842BB22C28001B7AC9 /* Violet Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4FE4A832BB22C28001B7AC9 /* Violet Sans Regular.ttf */; };
+		D4FE4A862BB2302B001B7AC9 /* Fonts+Vizor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A852BB2302B001B7AC9 /* Fonts+Vizor.swift */; };
+		D4FE4A8C2BB23C6E001B7AC9 /* Wittgenstein.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4FE4A8B2BB23C6E001B7AC9 /* Wittgenstein.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phases.swift; sourceTree = "<group>"; };
+		D4B8094C2BC1744D008987FB /* CubeRotationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeRotationModifier.swift; sourceTree = "<group>"; };
 		D4FE4A312BB20059001B7AC9 /* Vizor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vizor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FE4A342BB20059001B7AC9 /* VizorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VizorApp.swift; sourceTree = "<group>"; };
 		D4FE4A362BB20059001B7AC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +56,12 @@
 		D4FE4A4D2BB2005B001B7AC9 /* VizorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VizorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FE4A512BB2005B001B7AC9 /* VizorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VizorUITests.swift; sourceTree = "<group>"; };
 		D4FE4A532BB2005B001B7AC9 /* VizorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VizorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D4FE4A632BB21454001B7AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D4FE4A7F2BB22A38001B7AC9 /* AntiqueSerie.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntiqueSerie.otf; sourceTree = "<group>"; };
+		D4FE4A812BB22BB0001B7AC9 /* BricolageGrotesque.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BricolageGrotesque.ttf; sourceTree = "<group>"; };
+		D4FE4A832BB22C28001B7AC9 /* Violet Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Violet Sans Regular.ttf"; sourceTree = "<group>"; };
+		D4FE4A852BB2302B001B7AC9 /* Fonts+Vizor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+Vizor.swift"; sourceTree = "<group>"; };
+		D4FE4A8B2BB23C6E001B7AC9 /* Wittgenstein.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Wittgenstein.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4FE4A7A2BB221A4001B7AC9 /* VFont in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +90,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D45A2AE82BB35973009ABEF2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4B8094B2BC1742E008987FB /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				D4B8094C2BC1744D008987FB /* CubeRotationModifier.swift */,
+			);
+			name = ViewModifiers;
+			sourceTree = "<group>";
+		};
 		D4FE4A282BB20059001B7AC9 = {
 			isa = PBXGroup;
 			children = (
@@ -96,11 +129,16 @@
 		D4FE4A332BB20059001B7AC9 /* Vizor */ = {
 			isa = PBXGroup;
 			children = (
+				D4B8094B2BC1742E008987FB /* ViewModifiers */,
+				D4FE4A632BB21454001B7AC9 /* Info.plist */,
 				D4FE4A342BB20059001B7AC9 /* VizorApp.swift */,
 				D4FE4A362BB20059001B7AC9 /* ContentView.swift */,
 				D4FE4A382BB20059001B7AC9 /* Item.swift */,
+				D4FE4A852BB2302B001B7AC9 /* Fonts+Vizor.swift */,
+				D45A2AE82BB35973009ABEF2 /* View */,
 				D4FE4A3A2BB2005B001B7AC9 /* Assets.xcassets */,
 				D4FE4A3C2BB2005B001B7AC9 /* Preview Content */,
+				D4FE4A602BB213E6001B7AC9 /* Fonts */,
 			);
 			path = Vizor;
 			sourceTree = "<group>";
@@ -130,6 +168,17 @@
 			path = VizorUITests;
 			sourceTree = "<group>";
 		};
+		D4FE4A602BB213E6001B7AC9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D4FE4A8B2BB23C6E001B7AC9 /* Wittgenstein.ttf */,
+				D4FE4A812BB22BB0001B7AC9 /* BricolageGrotesque.ttf */,
+				D4FE4A7F2BB22A38001B7AC9 /* AntiqueSerie.otf */,
+				D4FE4A832BB22C28001B7AC9 /* Violet Sans Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +195,9 @@
 			dependencies = (
 			);
 			name = Vizor;
+			packageProductDependencies = (
+				D4FE4A792BB221A4001B7AC9 /* VFont */,
+			);
 			productName = Vizor;
 			productReference = D4FE4A312BB20059001B7AC9 /* Vizor.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +270,9 @@
 				Base,
 			);
 			mainGroup = D4FE4A282BB20059001B7AC9;
+			packageReferences = (
+				D4FE4A782BB221A3001B7AC9 /* XCRemoteSwiftPackageReference "vfont" */,
+			);
 			productRefGroup = D4FE4A322BB20059001B7AC9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,7 +290,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4FE4A3E2BB2005B001B7AC9 /* Preview Assets.xcassets in Resources */,
+				D4FE4A8C2BB23C6E001B7AC9 /* Wittgenstein.ttf in Resources */,
+				D4FE4A842BB22C28001B7AC9 /* Violet Sans Regular.ttf in Resources */,
+				D4FE4A822BB22BB0001B7AC9 /* BricolageGrotesque.ttf in Resources */,
 				D4FE4A3B2BB2005B001B7AC9 /* Assets.xcassets in Resources */,
+				D4FE4A802BB22A38001B7AC9 /* AntiqueSerie.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +320,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4FE4A372BB20059001B7AC9 /* ContentView.swift in Sources */,
+				D45A2AEC2BB35A2A009ABEF2 /* Phases.swift in Sources */,
 				D4FE4A392BB20059001B7AC9 /* Item.swift in Sources */,
 				D4FE4A352BB20059001B7AC9 /* VizorApp.swift in Sources */,
+				D4FE4A862BB2302B001B7AC9 /* Fonts+Vizor.swift in Sources */,
+				D4B8094D2BC1744D008987FB /* CubeRotationModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +491,7 @@
 				DEVELOPMENT_TEAM = RU773P5475;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Vizor/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -458,6 +521,7 @@
 				DEVELOPMENT_TEAM = RU773P5475;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Vizor/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -592,6 +656,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D4FE4A782BB221A3001B7AC9 /* XCRemoteSwiftPackageReference "vfont" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dufflink/vfont.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D4FE4A792BB221A4001B7AC9 /* VFont */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4FE4A782BB221A3001B7AC9 /* XCRemoteSwiftPackageReference "vfont" */;
+			productName = VFont;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D4FE4A292BB20059001B7AC9 /* Project object */;
 }
