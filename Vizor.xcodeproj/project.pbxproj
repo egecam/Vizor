@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D45A2AEC2BB35A2A009ABEF2 /* Phases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */; };
 		D4B8094D2BC1744D008987FB /* CubeRotationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8094C2BC1744D008987FB /* CubeRotationModifier.swift */; };
+		D4B8094F2BC17E59008987FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D4B8094E2BC17E59008987FB /* README.md */; };
 		D4FE4A352BB20059001B7AC9 /* VizorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A342BB20059001B7AC9 /* VizorApp.swift */; };
 		D4FE4A372BB20059001B7AC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A362BB20059001B7AC9 /* ContentView.swift */; };
 		D4FE4A392BB20059001B7AC9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A382BB20059001B7AC9 /* Item.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phases.swift; sourceTree = "<group>"; };
 		D4B8094C2BC1744D008987FB /* CubeRotationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeRotationModifier.swift; sourceTree = "<group>"; };
+		D4B8094E2BC17E59008987FB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D4FE4A312BB20059001B7AC9 /* Vizor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vizor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FE4A342BB20059001B7AC9 /* VizorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VizorApp.swift; sourceTree = "<group>"; };
 		D4FE4A362BB20059001B7AC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		D4FE4A282BB20059001B7AC9 = {
 			isa = PBXGroup;
 			children = (
+				D4B8094E2BC17E59008987FB /* README.md */,
 				D4FE4A332BB20059001B7AC9 /* Vizor */,
 				D4FE4A462BB2005B001B7AC9 /* VizorTests */,
 				D4FE4A502BB2005B001B7AC9 /* VizorUITests */,
@@ -292,6 +295,7 @@
 				D4FE4A3E2BB2005B001B7AC9 /* Preview Assets.xcassets in Resources */,
 				D4FE4A8C2BB23C6E001B7AC9 /* Wittgenstein.ttf in Resources */,
 				D4FE4A842BB22C28001B7AC9 /* Violet Sans Regular.ttf in Resources */,
+				D4B8094F2BC17E59008987FB /* README.md in Resources */,
 				D4FE4A822BB22BB0001B7AC9 /* BricolageGrotesque.ttf in Resources */,
 				D4FE4A3B2BB2005B001B7AC9 /* Assets.xcassets in Resources */,
 				D4FE4A802BB22A38001B7AC9 /* AntiqueSerie.otf in Resources */,
