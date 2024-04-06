@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "vfont",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dufflink/vfont.git",
+      "state" : {
+        "revision" : "eceae7296a3bb54a1e8b5fca0bda047c5ca31264",
+        "version" : "0.6.1"
+      }
+    }
+  ],
+  "version" : 2
+}

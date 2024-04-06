@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import VFont
 
 struct ContentView: View {
     @State private var selectedTab = 1
