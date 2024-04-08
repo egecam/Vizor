@@ -11,41 +11,45 @@ import VFont
 
 struct ContentView: View {
     @State private var selectedTab = 1
+    @State private var animateGradient: Bool = false
     
     var body: some View {
-        
         ZStack {
-            TabView(selection: $selectedTab) {
-                Text("Calendar")
-                    .tabItem {
-                        Label("Calendar", systemImage: "calendar")
-                    }
-                
-                Phases()
-                    .tag(1)
-                    .tabItem {
-                        Label("Daylight Phases", systemImage: "house.fill")
-                    }
-                
-                VStack {
-                    Text("Heading")
-                        .font(.custom("AntiqueSerie-Regular", size: 24))
-                    Text("The quick brown fox jumps over the lazy dog and runs away.")
-                        .font(.wittgenstein(size: 16, width: 100, weight: 200))
-                }
-                .tabItem {
-                    Label("Feed", systemImage: "square.stack.fill")
+            
+            // SCROLLVIEW FOR TABS
+            ScrollView(.horizontal) {
+                LazyHStack(spacing: 0) {
+                    VCalendar()
+                        .containerRelativeFrame(.horizontal)
+                    
+                    Phases()
+                        .containerRelativeFrame(.horizontal)
+                        .scrollTransition(axis: .horizontal) { content, phase in
+                            content
+                                .scaleEffect(x: phase.isIdentity ? 1 : 0.8, y: phase.isIdentity ? 1 : 0.8)
+                        }
+                    
+                    Feed()
+                        .containerRelativeFrame(.horizontal)
                 }
             }
+            .defaultScrollAnchor(.center)
+            .scrollIndicators(.hidden)
+            .modifier(FullscreenScrollViewModifier())
             
+            // APP TITLE
             HStack {
                 Label("Vizor", systemImage: "dot.viewfinder")
-                    .font(.bricolageGrotesque(size: 24, width: 100, weight: 600))
+                    .font(.bricolageGrotesque(size: 26, width: 100, weight: 600))
                     .bold()
                     .padding()
+                    .frame(height: 50)
+                    .background(.ultraThinMaterial)
+                    .clipShape(RoundedRectangle(cornerRadius: 18.0))
                 
                 Spacer()
             }
+            .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 0))
             .offset(x: 0, y: -350)
         }
     }
