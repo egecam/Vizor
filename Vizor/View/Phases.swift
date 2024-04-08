@@ -9,28 +9,11 @@ import SwiftUI
 
 struct Phases: View {
     
-    let color: Color = .blue
-    var currentPhase: String = "Blue Hour"
-    
-    var opacityLevels = [
-        0.3,
-        0.5,
-        0.75]
-    
-    func getPhaseList(currentPhase: String) -> Array<String> {
-        var phases: Array<String> = ["Sunrise", "Golden Hour", "Blue Hour", "Twilight"]
-        
-        for phase in 0...phases.count {
-            if phases[phase] == currentPhase {
-                phases.remove(at: phase)
-                break
-            }
-        }
-        
-        return phases
-    }
+    var currentPhase: String = "Twilight"
     
     var body: some View {
+        
+        let themeColor: Color? = colors[currentPhase]
         
         ScrollView(.vertical) {
             VStack(spacing: 0) {
@@ -38,7 +21,7 @@ struct Phases: View {
                     VStack(spacing: 0) {
                         // CURRENT PHASE
                         ZStack {
-                            color.opacity(0.2)
+                            themeColor.opacity(0.2)
                             
                             VStack {
                                 Text("Current phase in your area is")
@@ -55,9 +38,17 @@ struct Phases: View {
                             ForEach(getPhaseList(currentPhase: currentPhase), id: \.self) { phase in
                                 
                                 ZStack {
-                                    color.opacity(opacityLevels[phaseList.firstIndex(of: phase)!])
-                                    Text(phase)
-                                        .font(.title)
+                                    themeColor.opacity(opacityLevels[phaseList.firstIndex(of: phase)!])
+                                    HStack {
+                                        Text(phase)
+                                            .modifier(ArticleTitle())
+                                            .font(.title)
+                                        
+                                        HStack {
+                                            Text("19.41")
+                                                .font(.title2)
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -67,10 +58,7 @@ struct Phases: View {
                 }
             }
         }
-        .ignoresSafeArea()
-        .scrollTargetLayout()
-        .scrollTargetBehavior(.paging)
-        .scrollBounceBehavior(.basedOnSize)
+        .modifier(FullscreenScrollViewModifier())
         
     }
 }
