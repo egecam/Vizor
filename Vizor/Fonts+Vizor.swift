@@ -24,3 +24,21 @@ extension Font {
         ])
     }
 }
+
+struct ArticleBody: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .monospaced()
+    }
+}
+
+struct ArticleTitle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.bricolageGrotesque(size: 36, width: 100, weight: 400))
+    }
+}
+
+#Preview {
+    ContentView()
+}
