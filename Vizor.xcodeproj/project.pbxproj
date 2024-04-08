@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D45A2AEC2BB35A2A009ABEF2 /* Phases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */; };
+		D4A346662BC47B1600EA3CC8 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A346652BC47B1600EA3CC8 /* Feed.swift */; };
+		D4A346682BC4829E00EA3CC8 /* Phase+Vizor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A346672BC4829E00EA3CC8 /* Phase+Vizor.swift */; };
+		D4A3466A2BC482EF00EA3CC8 /* FullscreenScrollViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A346692BC482EF00EA3CC8 /* FullscreenScrollViewModifier.swift */; };
+		D4A3466C2BC4879500EA3CC8 /* VCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3466B2BC4879500EA3CC8 /* VCalendar.swift */; };
+		D4A3466E2BC49B4D00EA3CC8 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3466D2BC49B4D00EA3CC8 /* SplashView.swift */; };
 		D4B8094D2BC1744D008987FB /* CubeRotationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8094C2BC1744D008987FB /* CubeRotationModifier.swift */; };
 		D4B8094F2BC17E59008987FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D4B8094E2BC17E59008987FB /* README.md */; };
 		D4FE4A352BB20059001B7AC9 /* VizorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A342BB20059001B7AC9 /* VizorApp.swift */; };
@@ -45,6 +50,11 @@
 
 /* Begin PBXFileReference section */
 		D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phases.swift; sourceTree = "<group>"; };
+		D4A346652BC47B1600EA3CC8 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		D4A346672BC4829E00EA3CC8 /* Phase+Vizor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Phase+Vizor.swift"; sourceTree = "<group>"; };
+		D4A346692BC482EF00EA3CC8 /* FullscreenScrollViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenScrollViewModifier.swift; sourceTree = "<group>"; };
+		D4A3466B2BC4879500EA3CC8 /* VCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCalendar.swift; sourceTree = "<group>"; };
+		D4A3466D2BC49B4D00EA3CC8 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashView.swift; path = ../SplashView.swift; sourceTree = "<group>"; };
 		D4B8094C2BC1744D008987FB /* CubeRotationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeRotationModifier.swift; sourceTree = "<group>"; };
 		D4B8094E2BC17E59008987FB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D4FE4A312BB20059001B7AC9 /* Vizor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vizor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +105,10 @@
 		D45A2AE82BB35973009ABEF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D4A3466D2BC49B4D00EA3CC8 /* SplashView.swift */,
+				D4A3466B2BC4879500EA3CC8 /* VCalendar.swift */,
 				D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */,
+				D4A346652BC47B1600EA3CC8 /* Feed.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				D4B8094C2BC1744D008987FB /* CubeRotationModifier.swift */,
+				D4A346692BC482EF00EA3CC8 /* FullscreenScrollViewModifier.swift */,
 			);
 			name = ViewModifiers;
 			sourceTree = "<group>";
@@ -138,6 +152,7 @@
 				D4FE4A362BB20059001B7AC9 /* ContentView.swift */,
 				D4FE4A382BB20059001B7AC9 /* Item.swift */,
 				D4FE4A852BB2302B001B7AC9 /* Fonts+Vizor.swift */,
+				D4A346672BC4829E00EA3CC8 /* Phase+Vizor.swift */,
 				D45A2AE82BB35973009ABEF2 /* View */,
 				D4FE4A3A2BB2005B001B7AC9 /* Assets.xcassets */,
 				D4FE4A3C2BB2005B001B7AC9 /* Preview Content */,
@@ -324,11 +339,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4FE4A372BB20059001B7AC9 /* ContentView.swift in Sources */,
+				D4A3466E2BC49B4D00EA3CC8 /* SplashView.swift in Sources */,
 				D45A2AEC2BB35A2A009ABEF2 /* Phases.swift in Sources */,
+				D4A346682BC4829E00EA3CC8 /* Phase+Vizor.swift in Sources */,
+				D4A3466A2BC482EF00EA3CC8 /* FullscreenScrollViewModifier.swift in Sources */,
 				D4FE4A392BB20059001B7AC9 /* Item.swift in Sources */,
+				D4A346662BC47B1600EA3CC8 /* Feed.swift in Sources */,
 				D4FE4A352BB20059001B7AC9 /* VizorApp.swift in Sources */,
 				D4FE4A862BB2302B001B7AC9 /* Fonts+Vizor.swift in Sources */,
 				D4B8094D2BC1744D008987FB /* CubeRotationModifier.swift in Sources */,
+				D4A3466C2BC4879500EA3CC8 /* VCalendar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
