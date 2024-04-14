@@ -26,7 +26,7 @@ struct Phases: View {
                                 Text("Current phase in your area is")
                                     .font(.caption)
                                 Text(currentPhase)
-                                    .font(.custom("AntiqueSerie-Regular", size: 52))
+                                    .font(.familjen(size: 52, width: 100, weight: 700))
                             }
                         }
                         
@@ -38,9 +38,13 @@ struct Phases: View {
                                 
                                 ZStack {
                                     themeColor.opacity(opacityLevels[phaseList.firstIndex(of: phase)!])
+                                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                                        .frame(height: 100)
+                                        .blur(radius: 1)
+                                    
                                     HStack {
                                         Text(phase)
-                                            .modifier(ArticleTitle())
+                                            .font(.familjen(size: 36, width: 100, weight: 400))
                                             .font(.title)
                                         
                                         HStack {
@@ -63,5 +67,5 @@ struct Phases: View {
 }
 
 #Preview {
-    Phases()
+    ContentView()
 }
