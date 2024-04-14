@@ -70,5 +70,5 @@ struct Feed: View {
 }
 
 #Preview {
-    Feed()
+    Feed(colorTheme: .cyan)
 }
