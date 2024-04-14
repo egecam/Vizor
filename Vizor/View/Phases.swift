@@ -53,8 +53,12 @@ struct Phases: View {
                                         }
                                     }
                                 }
+                                .padding(5)
                             }
                         }
+                        .padding()
+                        .background(themeColor.opacity(0.2))
+                        
                     }
                     .frame(maxWidth: .infinity)
                     .containerRelativeFrame(.vertical, alignment: .center)
