@@ -33,6 +33,10 @@ struct SplashView: View {
                         .font(.bricolageGrotesque(size: 48, width: 100, weight: 600))
                         .bold()
                         .padding()
+                        .foregroundStyle(.tangerine)
+                        .background(.ultraThinMaterial.opacity(0.3))
+                        .clipShape(RoundedRectangle(cornerRadius: 18.0))
+                        
                 }
                 .ignoresSafeArea()
             }
