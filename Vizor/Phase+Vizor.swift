@@ -9,10 +9,10 @@ import Foundation
 import SwiftUI
 
 var colors: Dictionary<String, Color> = [
-    "Sunrise": Color.yellow,
-    "Golden Hour": Color.orange,
-    "Blue Hour": Color.blue,
-    "Twilight": Color.indigo
+    "Sunrise": Color.sunrise,
+    "Golden Hour": Color.goldenhour,
+    "Blue Hour": Color.bluehour,
+    "Twilight": Color.twilight
 ]
 
 var opacityLevels = [
