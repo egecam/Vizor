@@ -9,11 +9,10 @@ import SwiftUI
 
 struct Phases: View {
     
-    var currentPhase: String = "Twilight"
+    @Binding var currentPhase: String
+    @Binding var themeColor: Color
     
     var body: some View {
-        
-        let themeColor: Color? = colors[currentPhase]
         
         ScrollView(.vertical) {
             VStack(spacing: 0) {
