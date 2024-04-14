@@ -37,7 +37,7 @@ struct SplashView: View {
                 .ignoresSafeArea()
             }
         }
-        .onAppear {
+       .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                 withAnimation(.easeOut(duration: 0.2)) {
                     self.isActive = true
