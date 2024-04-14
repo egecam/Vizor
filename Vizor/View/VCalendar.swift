@@ -8,19 +8,30 @@
 import SwiftUI
 
 struct VCalendar: View {
+    @State private var date = Date()
+    
     var body: some View {
         ZStack {
-            Color.indigo
+            Color.white
                 .opacity(0.2)
                 .ignoresSafeArea()
             
-            VStack {
+            VStack(alignment: .leading) {
                 Text("Calendar")
                     .modifier(ArticleTitle())
+                
                 Text("Now is \(Date.now)")
                     .modifier(ArticleBody())
-                    .padding()
+                
+                DatePicker(
+                    "Start Date",
+                    selection: $date,
+                    displayedComponents: [.date]
+                )
+                .datePickerStyle(.graphical)
+                .tint(.primary)
             }
+            .padding()
         }
     }
 }
