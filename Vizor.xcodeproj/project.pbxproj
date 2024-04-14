@@ -13,8 +13,9 @@
 		D4A3466A2BC482EF00EA3CC8 /* FullscreenScrollViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A346692BC482EF00EA3CC8 /* FullscreenScrollViewModifier.swift */; };
 		D4A3466C2BC4879500EA3CC8 /* VCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3466B2BC4879500EA3CC8 /* VCalendar.swift */; };
 		D4A3466E2BC49B4D00EA3CC8 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3466D2BC49B4D00EA3CC8 /* SplashView.swift */; };
-		D4B8094D2BC1744D008987FB /* CubeRotationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8094C2BC1744D008987FB /* CubeRotationModifier.swift */; };
 		D4B8094F2BC17E59008987FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D4B8094E2BC17E59008987FB /* README.md */; };
+		D4E7E2EF2BC5A2800084C9EF /* Familjen Grotesk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4E7E2EE2BC5A2800084C9EF /* Familjen Grotesk.ttf */; };
+		D4E7E2F32BC5A7EA0084C9EF /* Overused Grotesk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4E7E2F22BC5A7EA0084C9EF /* Overused Grotesk.ttf */; };
 		D4FE4A352BB20059001B7AC9 /* VizorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A342BB20059001B7AC9 /* VizorApp.swift */; };
 		D4FE4A372BB20059001B7AC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A362BB20059001B7AC9 /* ContentView.swift */; };
 		D4FE4A392BB20059001B7AC9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A382BB20059001B7AC9 /* Item.swift */; };
@@ -55,8 +56,9 @@
 		D4A346692BC482EF00EA3CC8 /* FullscreenScrollViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenScrollViewModifier.swift; sourceTree = "<group>"; };
 		D4A3466B2BC4879500EA3CC8 /* VCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCalendar.swift; sourceTree = "<group>"; };
 		D4A3466D2BC49B4D00EA3CC8 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashView.swift; path = ../SplashView.swift; sourceTree = "<group>"; };
-		D4B8094C2BC1744D008987FB /* CubeRotationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeRotationModifier.swift; sourceTree = "<group>"; };
 		D4B8094E2BC17E59008987FB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D4E7E2EE2BC5A2800084C9EF /* Familjen Grotesk.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Familjen Grotesk.ttf"; sourceTree = "<group>"; };
+		D4E7E2F22BC5A7EA0084C9EF /* Overused Grotesk.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Overused Grotesk.ttf"; sourceTree = "<group>"; };
 		D4FE4A312BB20059001B7AC9 /* Vizor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vizor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FE4A342BB20059001B7AC9 /* VizorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VizorApp.swift; sourceTree = "<group>"; };
 		D4FE4A362BB20059001B7AC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		D45A2AE82BB35973009ABEF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D4FE4A362BB20059001B7AC9 /* ContentView.swift */,
 				D4A3466D2BC49B4D00EA3CC8 /* SplashView.swift */,
 				D4A3466B2BC4879500EA3CC8 /* VCalendar.swift */,
 				D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */,
@@ -116,7 +119,6 @@
 		D4B8094B2BC1742E008987FB /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
-				D4B8094C2BC1744D008987FB /* CubeRotationModifier.swift */,
 				D4A346692BC482EF00EA3CC8 /* FullscreenScrollViewModifier.swift */,
 			);
 			name = ViewModifiers;
@@ -149,7 +151,6 @@
 				D4B8094B2BC1742E008987FB /* ViewModifiers */,
 				D4FE4A632BB21454001B7AC9 /* Info.plist */,
 				D4FE4A342BB20059001B7AC9 /* VizorApp.swift */,
-				D4FE4A362BB20059001B7AC9 /* ContentView.swift */,
 				D4FE4A382BB20059001B7AC9 /* Item.swift */,
 				D4FE4A852BB2302B001B7AC9 /* Fonts+Vizor.swift */,
 				D4A346672BC4829E00EA3CC8 /* Phase+Vizor.swift */,
@@ -193,6 +194,8 @@
 				D4FE4A812BB22BB0001B7AC9 /* BricolageGrotesque.ttf */,
 				D4FE4A7F2BB22A38001B7AC9 /* AntiqueSerie.otf */,
 				D4FE4A832BB22C28001B7AC9 /* Violet Sans Regular.ttf */,
+				D4E7E2EE2BC5A2800084C9EF /* Familjen Grotesk.ttf */,
+				D4E7E2F22BC5A7EA0084C9EF /* Overused Grotesk.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -312,6 +315,8 @@
 				D4FE4A842BB22C28001B7AC9 /* Violet Sans Regular.ttf in Resources */,
 				D4B8094F2BC17E59008987FB /* README.md in Resources */,
 				D4FE4A822BB22BB0001B7AC9 /* BricolageGrotesque.ttf in Resources */,
+				D4E7E2F32BC5A7EA0084C9EF /* Overused Grotesk.ttf in Resources */,
+				D4E7E2EF2BC5A2800084C9EF /* Familjen Grotesk.ttf in Resources */,
 				D4FE4A3B2BB2005B001B7AC9 /* Assets.xcassets in Resources */,
 				D4FE4A802BB22A38001B7AC9 /* AntiqueSerie.otf in Resources */,
 			);
@@ -347,7 +352,6 @@
 				D4A346662BC47B1600EA3CC8 /* Feed.swift in Sources */,
 				D4FE4A352BB20059001B7AC9 /* VizorApp.swift in Sources */,
 				D4FE4A862BB2302B001B7AC9 /* Fonts+Vizor.swift in Sources */,
-				D4B8094D2BC1744D008987FB /* CubeRotationModifier.swift in Sources */,
 				D4A3466C2BC4879500EA3CC8 /* VCalendar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
