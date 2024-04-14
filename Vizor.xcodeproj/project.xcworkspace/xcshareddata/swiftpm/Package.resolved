@@ -1,4 +1,5 @@
 {
+  "originHash" : "db13c69dfa7ba4159ad2569b977b0152b9e1f1f956468e08aa5714a19e6d9c59",
   "pins" : [
     {
       "identity" : "vfont",
@@ -10,5 +11,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
