@@ -45,3 +45,5 @@ func setTheme(dynamicPreference: Bool, theme: Color) -> Color {
     }
 }
 
+var previewPhase = "Golden Hour"
+var previewColor = Color.goldenhour
