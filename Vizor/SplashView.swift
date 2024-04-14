@@ -19,15 +19,16 @@ struct SplashView: View {
                 ZStack {
                     Color.black
                     
-                    LinearGradient(colors: [.orange, .pink], startPoint: .topLeading, endPoint: .bottomTrailing)
-                        .hueRotation(.degrees(animateGradient ? 0 : 180))
+                   /* LinearGradient(colors: [.tangerine, .bluehour], startPoint: .topLeading, endPoint: .bottomTrailing)
+                        .hueRotation(.degrees(animateGradient ? 180 : 0))
                         .onAppear {
                             withAnimation(.easeInOut(duration: 3.5)) {
                                 animateGradient.toggle()
                             }
                         }
+                        .blur(radius: 3.0)
                         .ignoresSafeArea()
-                    
+                    */
                     Label("Vizor", systemImage: "dot.viewfinder")
                         .font(.bricolageGrotesque(size: 48, width: 100, weight: 600))
                         .bold()
