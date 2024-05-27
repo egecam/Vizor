@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D42965CC2BF4C2590014CFC6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42965CB2BF4C2590014CFC6 /* LocationManager.swift */; };
+		D439EAC72BDAE9C600329989 /* SunKit in Frameworks */ = {isa = PBXBuildFile; productRef = D439EAC62BDAE9C600329989 /* SunKit */; };
+		D439EACA2BDAEA4500329989 /* SunKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D439EAC92BDAEA4500329989 /* SunKitManager.swift */; };
+		D443E4E22BF4D08D00E454D8 /* PhaseCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443E4E12BF4D08D00E454D8 /* PhaseCalculator.swift */; };
 		D45A2AEC2BB35A2A009ABEF2 /* Phases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */; };
 		D4A346662BC47B1600EA3CC8 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A346652BC47B1600EA3CC8 /* Feed.swift */; };
 		D4A346682BC4829E00EA3CC8 /* Phase+Vizor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A346672BC4829E00EA3CC8 /* Phase+Vizor.swift */; };
@@ -14,8 +18,11 @@
 		D4A3466C2BC4879500EA3CC8 /* VCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3466B2BC4879500EA3CC8 /* VCalendar.swift */; };
 		D4A3466E2BC49B4D00EA3CC8 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3466D2BC49B4D00EA3CC8 /* SplashView.swift */; };
 		D4B8094F2BC17E59008987FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D4B8094E2BC17E59008987FB /* README.md */; };
-		D4E7E2EF2BC5A2800084C9EF /* Familjen Grotesk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4E7E2EE2BC5A2800084C9EF /* Familjen Grotesk.ttf */; };
+		D4E315252BCD91FB00336BAE /* Vollkorn-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4E315242BCD91FB00336BAE /* Vollkorn-Regular.ttf */; };
+		D4E315272BCDA0BB00336BAE /* FeedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E315262BCDA0BB00336BAE /* FeedElement.swift */; };
 		D4E7E2F32BC5A7EA0084C9EF /* Overused Grotesk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4E7E2F22BC5A7EA0084C9EF /* Overused Grotesk.ttf */; };
+		D4F458AD2C0525BB0041ACEA /* CurrentPhaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F458AC2C0525BB0041ACEA /* CurrentPhaseHandler.swift */; };
+		D4FD6F412BECE819005D1B38 /* MapSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD6F402BECE819005D1B38 /* MapSheetView.swift */; };
 		D4FE4A352BB20059001B7AC9 /* VizorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A342BB20059001B7AC9 /* VizorApp.swift */; };
 		D4FE4A372BB20059001B7AC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A362BB20059001B7AC9 /* ContentView.swift */; };
 		D4FE4A392BB20059001B7AC9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A382BB20059001B7AC9 /* Item.swift */; };
@@ -25,11 +32,8 @@
 		D4FE4A522BB2005B001B7AC9 /* VizorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A512BB2005B001B7AC9 /* VizorUITests.swift */; };
 		D4FE4A542BB2005B001B7AC9 /* VizorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A532BB2005B001B7AC9 /* VizorUITestsLaunchTests.swift */; };
 		D4FE4A7A2BB221A4001B7AC9 /* VFont in Frameworks */ = {isa = PBXBuildFile; productRef = D4FE4A792BB221A4001B7AC9 /* VFont */; };
-		D4FE4A802BB22A38001B7AC9 /* AntiqueSerie.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4FE4A7F2BB22A38001B7AC9 /* AntiqueSerie.otf */; };
-		D4FE4A822BB22BB0001B7AC9 /* BricolageGrotesque.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4FE4A812BB22BB0001B7AC9 /* BricolageGrotesque.ttf */; };
-		D4FE4A842BB22C28001B7AC9 /* Violet Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4FE4A832BB22C28001B7AC9 /* Violet Sans Regular.ttf */; };
+		D4FE4A802BB22A38001B7AC9 /* AntiqueSerie-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4FE4A7F2BB22A38001B7AC9 /* AntiqueSerie-Regular.otf */; };
 		D4FE4A862BB2302B001B7AC9 /* Fonts+Vizor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A852BB2302B001B7AC9 /* Fonts+Vizor.swift */; };
-		D4FE4A8C2BB23C6E001B7AC9 /* Wittgenstein.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4FE4A8B2BB23C6E001B7AC9 /* Wittgenstein.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D42965CB2BF4C2590014CFC6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D439EAC92BDAEA4500329989 /* SunKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunKitManager.swift; sourceTree = "<group>"; };
+		D443E4E12BF4D08D00E454D8 /* PhaseCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseCalculator.swift; sourceTree = "<group>"; };
 		D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phases.swift; sourceTree = "<group>"; };
 		D4A346652BC47B1600EA3CC8 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		D4A346672BC4829E00EA3CC8 /* Phase+Vizor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Phase+Vizor.swift"; sourceTree = "<group>"; };
@@ -57,8 +64,11 @@
 		D4A3466B2BC4879500EA3CC8 /* VCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCalendar.swift; sourceTree = "<group>"; };
 		D4A3466D2BC49B4D00EA3CC8 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashView.swift; path = ../SplashView.swift; sourceTree = "<group>"; };
 		D4B8094E2BC17E59008987FB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D4E7E2EE2BC5A2800084C9EF /* Familjen Grotesk.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Familjen Grotesk.ttf"; sourceTree = "<group>"; };
+		D4E315242BCD91FB00336BAE /* Vollkorn-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vollkorn-Regular.ttf"; sourceTree = "<group>"; };
+		D4E315262BCDA0BB00336BAE /* FeedElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedElement.swift; sourceTree = "<group>"; };
 		D4E7E2F22BC5A7EA0084C9EF /* Overused Grotesk.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Overused Grotesk.ttf"; sourceTree = "<group>"; };
+		D4F458AC2C0525BB0041ACEA /* CurrentPhaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPhaseHandler.swift; sourceTree = "<group>"; };
+		D4FD6F402BECE819005D1B38 /* MapSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSheetView.swift; sourceTree = "<group>"; };
 		D4FE4A312BB20059001B7AC9 /* Vizor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vizor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FE4A342BB20059001B7AC9 /* VizorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VizorApp.swift; sourceTree = "<group>"; };
 		D4FE4A362BB20059001B7AC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,11 +81,8 @@
 		D4FE4A512BB2005B001B7AC9 /* VizorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VizorUITests.swift; sourceTree = "<group>"; };
 		D4FE4A532BB2005B001B7AC9 /* VizorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VizorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D4FE4A632BB21454001B7AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		D4FE4A7F2BB22A38001B7AC9 /* AntiqueSerie.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntiqueSerie.otf; sourceTree = "<group>"; };
-		D4FE4A812BB22BB0001B7AC9 /* BricolageGrotesque.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BricolageGrotesque.ttf; sourceTree = "<group>"; };
-		D4FE4A832BB22C28001B7AC9 /* Violet Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Violet Sans Regular.ttf"; sourceTree = "<group>"; };
+		D4FE4A7F2BB22A38001B7AC9 /* AntiqueSerie-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AntiqueSerie-Regular.otf"; sourceTree = "<group>"; };
 		D4FE4A852BB2302B001B7AC9 /* Fonts+Vizor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+Vizor.swift"; sourceTree = "<group>"; };
-		D4FE4A8B2BB23C6E001B7AC9 /* Wittgenstein.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Wittgenstein.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D439EAC72BDAE9C600329989 /* SunKit in Frameworks */,
 				D4FE4A7A2BB221A4001B7AC9 /* VFont in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +112,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D42965CA2BF4C23D0014CFC6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D42965CB2BF4C2590014CFC6 /* LocationManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D439EAC82BDAEA1A00329989 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D439EAC92BDAEA4500329989 /* SunKitManager.swift */,
+				D443E4E12BF4D08D00E454D8 /* PhaseCalculator.swift */,
+				D4F458AC2C0525BB0041ACEA /* CurrentPhaseHandler.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D45A2AE82BB35973009ABEF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +138,8 @@
 				D4A3466B2BC4879500EA3CC8 /* VCalendar.swift */,
 				D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */,
 				D4A346652BC47B1600EA3CC8 /* Feed.swift */,
+				D4E315262BCDA0BB00336BAE /* FeedElement.swift */,
+				D4FD6F402BECE819005D1B38 /* MapSheetView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,13 +176,15 @@
 		D4FE4A332BB20059001B7AC9 /* Vizor */ = {
 			isa = PBXGroup;
 			children = (
-				D4B8094B2BC1742E008987FB /* ViewModifiers */,
 				D4FE4A632BB21454001B7AC9 /* Info.plist */,
 				D4FE4A342BB20059001B7AC9 /* VizorApp.swift */,
 				D4FE4A382BB20059001B7AC9 /* Item.swift */,
 				D4FE4A852BB2302B001B7AC9 /* Fonts+Vizor.swift */,
 				D4A346672BC4829E00EA3CC8 /* Phase+Vizor.swift */,
+				D439EAC82BDAEA1A00329989 /* Model */,
 				D45A2AE82BB35973009ABEF2 /* View */,
+				D42965CA2BF4C23D0014CFC6 /* ViewModel */,
+				D4B8094B2BC1742E008987FB /* ViewModifiers */,
 				D4FE4A3A2BB2005B001B7AC9 /* Assets.xcassets */,
 				D4FE4A3C2BB2005B001B7AC9 /* Preview Content */,
 				D4FE4A602BB213E6001B7AC9 /* Fonts */,
@@ -190,12 +220,9 @@
 		D4FE4A602BB213E6001B7AC9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				D4FE4A8B2BB23C6E001B7AC9 /* Wittgenstein.ttf */,
-				D4FE4A812BB22BB0001B7AC9 /* BricolageGrotesque.ttf */,
-				D4FE4A7F2BB22A38001B7AC9 /* AntiqueSerie.otf */,
-				D4FE4A832BB22C28001B7AC9 /* Violet Sans Regular.ttf */,
-				D4E7E2EE2BC5A2800084C9EF /* Familjen Grotesk.ttf */,
+				D4FE4A7F2BB22A38001B7AC9 /* AntiqueSerie-Regular.otf */,
 				D4E7E2F22BC5A7EA0084C9EF /* Overused Grotesk.ttf */,
+				D4E315242BCD91FB00336BAE /* Vollkorn-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -218,6 +245,7 @@
 			name = Vizor;
 			packageProductDependencies = (
 				D4FE4A792BB221A4001B7AC9 /* VFont */,
+				D439EAC62BDAE9C600329989 /* SunKit */,
 			);
 			productName = Vizor;
 			productReference = D4FE4A312BB20059001B7AC9 /* Vizor.app */;
@@ -293,6 +321,7 @@
 			mainGroup = D4FE4A282BB20059001B7AC9;
 			packageReferences = (
 				D4FE4A782BB221A3001B7AC9 /* XCRemoteSwiftPackageReference "vfont" */,
+				D439EAC52BDAE9C600329989 /* XCRemoteSwiftPackageReference "SunKit" */,
 			);
 			productRefGroup = D4FE4A322BB20059001B7AC9 /* Products */;
 			projectDirPath = "";
@@ -311,14 +340,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4FE4A3E2BB2005B001B7AC9 /* Preview Assets.xcassets in Resources */,
-				D4FE4A8C2BB23C6E001B7AC9 /* Wittgenstein.ttf in Resources */,
-				D4FE4A842BB22C28001B7AC9 /* Violet Sans Regular.ttf in Resources */,
 				D4B8094F2BC17E59008987FB /* README.md in Resources */,
-				D4FE4A822BB22BB0001B7AC9 /* BricolageGrotesque.ttf in Resources */,
 				D4E7E2F32BC5A7EA0084C9EF /* Overused Grotesk.ttf in Resources */,
-				D4E7E2EF2BC5A2800084C9EF /* Familjen Grotesk.ttf in Resources */,
+				D4E315252BCD91FB00336BAE /* Vollkorn-Regular.ttf in Resources */,
 				D4FE4A3B2BB2005B001B7AC9 /* Assets.xcassets in Resources */,
-				D4FE4A802BB22A38001B7AC9 /* AntiqueSerie.otf in Resources */,
+				D4FE4A802BB22A38001B7AC9 /* AntiqueSerie-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,14 +371,20 @@
 			files = (
 				D4FE4A372BB20059001B7AC9 /* ContentView.swift in Sources */,
 				D4A3466E2BC49B4D00EA3CC8 /* SplashView.swift in Sources */,
+				D42965CC2BF4C2590014CFC6 /* LocationManager.swift in Sources */,
 				D45A2AEC2BB35A2A009ABEF2 /* Phases.swift in Sources */,
 				D4A346682BC4829E00EA3CC8 /* Phase+Vizor.swift in Sources */,
+				D4E315272BCDA0BB00336BAE /* FeedElement.swift in Sources */,
+				D4F458AD2C0525BB0041ACEA /* CurrentPhaseHandler.swift in Sources */,
 				D4A3466A2BC482EF00EA3CC8 /* FullscreenScrollViewModifier.swift in Sources */,
 				D4FE4A392BB20059001B7AC9 /* Item.swift in Sources */,
 				D4A346662BC47B1600EA3CC8 /* Feed.swift in Sources */,
 				D4FE4A352BB20059001B7AC9 /* VizorApp.swift in Sources */,
 				D4FE4A862BB2302B001B7AC9 /* Fonts+Vizor.swift in Sources */,
 				D4A3466C2BC4879500EA3CC8 /* VCalendar.swift in Sources */,
+				D443E4E22BF4D08D00E454D8 /* PhaseCalculator.swift in Sources */,
+				D4FD6F412BECE819005D1B38 /* MapSheetView.swift in Sources */,
+				D439EACA2BDAEA4500329989 /* SunKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +552,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Vizor/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This application needs your location to calculate the daylight phases.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -550,6 +583,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Vizor/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This application needs your location to calculate the daylight phases.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -686,6 +720,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D439EAC52BDAE9C600329989 /* XCRemoteSwiftPackageReference "SunKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Sunlitt/SunKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.0;
+			};
+		};
 		D4FE4A782BB221A3001B7AC9 /* XCRemoteSwiftPackageReference "vfont" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dufflink/vfont.git";
@@ -697,6 +739,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D439EAC62BDAE9C600329989 /* SunKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D439EAC52BDAE9C600329989 /* XCRemoteSwiftPackageReference "SunKit" */;
+			productName = SunKit;
+		};
 		D4FE4A792BB221A4001B7AC9 /* VFont */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D4FE4A782BB221A3001B7AC9 /* XCRemoteSwiftPackageReference "vfont" */;
