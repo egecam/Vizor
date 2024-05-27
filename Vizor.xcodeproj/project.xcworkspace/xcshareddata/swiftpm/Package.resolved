@@ -1,6 +1,15 @@
 {
-  "originHash" : "db13c69dfa7ba4159ad2569b977b0152b9e1f1f956468e08aa5714a19e6d9c59",
+  "originHash" : "82816a03b61a5d9c5e32134188d6998852238f3777e972aca45b37f54cd282c0",
   "pins" : [
+    {
+      "identity" : "sunkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Sunlitt/SunKit.git",
+      "state" : {
+        "revision" : "9179216697d4a5f1397423de46767c10f87e273c",
+        "version" : "2.8.0"
+      }
+    },
     {
       "identity" : "vfont",
       "kind" : "remoteSourceControl",
