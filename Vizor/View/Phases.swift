@@ -1,5 +1,5 @@
 //
-//  PhaseCard.swift
+//  Phases.swift
 //  Vizor
 //
 //  Created by Ege Çam on 26.03.2024.
