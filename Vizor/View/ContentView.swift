@@ -8,14 +8,17 @@
 import SwiftUI
 import SwiftData
 import VFont
+import MapKit
 
 struct ContentView: View {
-    @State var currentPhase: String = "Golden Hour"
-    @State var themeColor: Color = colors["Golden Hour"] ?? .cyan
+    @State var currentPhase: String
+    @State var themeColor: Color
     
     @State var dynamicThemePreference: Bool = true
     
-    @State var stateTheme: Color = .cyan
+    @State var userCoordinate: CLLocationCoordinate2D?
+    @State private var currentZoom = 0.0
+    @State private var totalZoom = 1.0
     
     var body: some View {
         ZStack {
@@ -34,7 +37,7 @@ struct ContentView: View {
                             }
                     }
                     
-                    Feed(colorTheme: setTheme(dynamicPreference: dynamicThemePreference, theme: colors[currentPhase]!))
+                    Feed(colorTheme: setTheme(dynamicPreference: dynamicThemePreference, theme: colors[currentPhase] ?? .cyan))
                         .containerRelativeFrame(.horizontal)
                 }
             }
