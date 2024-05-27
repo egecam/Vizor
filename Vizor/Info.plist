@@ -5,11 +5,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntiqueSerie-Regular.otf</string>
-		<string>Bricolage Grotesque.ttf</string>
-		<string>VioletSans-Regular.ttf</string>
-		<string>Wittgenstein.ttf</string>
-		<string>Familjen Grotesk.ttf</string>
 		<string>Overused Grotesk.ttf</string>
+		<string>Vollkorn-Regular.ttf</string>
 	</array>
 </dict>
 </plist>

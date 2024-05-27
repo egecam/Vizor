@@ -10,22 +10,8 @@ import SwiftUI
 import VFont
 
 extension Font {
-    static func bricolageGrotesque(size: CGFloat, width: CGFloat = 0, weight: CGFloat = 0) -> Font {
-        return .vFont("Bricolage Grotesque", size: size, axes: [
-            2003072104: width,
-            2003265652: weight
-        ])
-    }
-    
-    static func wittgenstein(size: CGFloat, width: CGFloat = 0, weight: CGFloat = 0) -> Font {
-        return .vFont("Wittgenstein", size: size, axes: [
-            2003072104: width,
-            2003265652: weight
-        ])
-    }
-    
-    static func familjen(size: CGFloat, width: CGFloat = 0, weight: CGFloat = 0) -> Font {
-        return .vFont("Familjen Grotesk", size: size, axes: [
+    static func vollkorn(size: CGFloat, width: CGFloat = 0, weight: CGFloat = 0) -> Font {
+        return .vFont("Vollkorn", size: size, axes: [
             2003072104: width,
             2003265652: weight
         ])
@@ -43,7 +29,7 @@ extension Font {
 struct ArticleBody: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(.familjen(size: 20, width: 100, weight: 100))
+            .font(.vollkorn(size: 20, width: 100, weight: 100))
     }
 }
 
@@ -52,8 +38,4 @@ struct ArticleTitle: ViewModifier {
         content
             .font(.overused(size: 36, width: 100, weight: 700))
     }
-}
-
-#Preview {
-    ContentView()
 }
