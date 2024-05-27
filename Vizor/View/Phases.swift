@@ -6,70 +6,121 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct Phases: View {
-    
     @Binding var currentPhase: String
     @Binding var themeColor: Color
     
+    @State var phaseTimeList: Dictionary<String, String> = ["": ""]
+    @State private var showingMapSheet = false
+    @State private var userCoordinate: CLLocationCoordinate2D?
+    
     var body: some View {
         
-        ScrollView(.vertical) {
+        NavigationStack {
             VStack(spacing: 0) {
-                ForEach(0..<20) { index in
-                    VStack(spacing: 0) {
-                        // CURRENT PHASE
-                        ZStack {
-                            themeColor.opacity(0.2)
+                VStack(spacing: 0) {
+                    // CURRENT PHASE
+                    ZStack {
+                        themeColor.opacity(0.2)
+                        
+                        VStack {
+                            Text(Date.now.formatted(date: .long, time: .omitted))
+                                .font(.vollkorn(size: 24, width: 100, weight: 500))
+                                .padding()
                             
                             VStack {
                                 Text("Current phase in your area is")
                                     .font(.caption)
+                                    .font(.overused(size: 24, width: 100, weight: 400))
                                 Text(currentPhase)
-                                    .font(.familjen(size: 52, width: 100, weight: 700))
+                                    .font(.vollkorn(size: 52, width: 100, weight: 700))
                             }
-                        }
-                        
-                        // INCOMING PHASES
-                        VStack(spacing: 0) {
-                            let phaseList = getPhaseList(currentPhase: currentPhase)
+                            .padding()
                             
-                            ForEach(getPhaseList(currentPhase: currentPhase), id: \.self) { phase in
+                        }
+                    }
+                    
+                    // INCOMING PHASES
+                    VStack(spacing: 0) {
+                        let phaseList = getPhaseList(currentPhase: currentPhase)
+                        
+                        ForEach(getPhaseList(currentPhase: currentPhase), id: \.self) { phase in
+                            
+                            ZStack {
+                                themeColor.opacity(opacityLevels[phaseList.firstIndex(of: phase)!])
+                                    .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                                    .frame(height: 100)
                                 
-                                ZStack {
-                                    themeColor.opacity(opacityLevels[phaseList.firstIndex(of: phase)!])
-                                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                                        .frame(height: 100)
-                                        .blur(radius: 1)
+                                HStack {
+                                    Text(phase)
                                     
                                     HStack {
-                                        Text(phase)
-                                            .font(.familjen(size: 36, width: 100, weight: 400))
-                                            .font(.title)
-                                        
-                                        HStack {
-                                            Text("19.41")
-                                                .font(.title2)
-                                        }
+                                        Text(phaseTimeList[phase] ?? "19.41")
                                     }
                                 }
-                                .padding(5)
+                                .font(.overused(size: 32, width: 100, weight: 400))
+                                .foregroundStyle(Color.primary)
                             }
+                            .padding(5)
                         }
-                        .padding()
-                        .background(themeColor.opacity(0.2))
-                        
                     }
-                    .frame(maxWidth: .infinity)
-                    .containerRelativeFrame(.vertical, alignment: .center)
+                    .padding()
+                    .background(themeColor.opacity(0.2))
+                }
+                
+            }
+            
+            // MARK: IN PROGRESS
+            /*
+             
+            .refreshable {
+                DispatchQueue.main.async {
+                    self.phaseTimeList = getPhaseTimeList(day: Date.now, location: CLLocation(latitude: userCoordinate?.latitude ?? 41.00, longitude: userCoordinate?.longitude ?? 28.54)).mapValues { date in
+                        let formatter = DateFormatter()
+                        formatter.timeStyle = .short
+                        formatter.dateStyle = .none
+                        return formatter.string(from: date)
+                    }
                 }
             }
+             
+             */
+            .modifier(FullscreenScrollViewModifier())
+            .onAppear {
+                DispatchQueue.main.async {
+                    self.phaseTimeList = getPhaseTimeList(day: Date.now, location: CLLocation(latitude: userCoordinate?.latitude ?? 41.00, longitude: userCoordinate?.longitude ?? 28.54)).mapValues { date in
+                        let formatter = DateFormatter()
+                        formatter.timeStyle = .short
+                        formatter.dateStyle = .none
+                        return formatter.string(from: date)
+                    }
+                }
+            }
+            
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showingMapSheet.toggle()
+                    } label: {
+                        Image(systemName: "map.fill")
+                            .padding()
+                            .background(.ultraThinMaterial)
+                            .clipShape(RoundedRectangle(cornerRadius: 14.0))
+                    }
+                    .tint(.primary)
+                    .sheet(isPresented: $showingMapSheet, content: {
+                        MapSheetView { coordinate in
+                            self.userCoordinate = coordinate
+                            currentPhase = updateCurrentPhase(for: coordinate)
+                        }
+                    })
+                    
+                }
+                
+            }
+            .toolbarBackground(.hidden, for: .navigationBar)
         }
-        .modifier(FullscreenScrollViewModifier())
-        
     }
-}
-
-#Preview {
-    ContentView()
 }
