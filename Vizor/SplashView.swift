@@ -6,15 +6,20 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct SplashView: View {
     @State var animateGradient: Bool = false
     @State var isActive: Bool = false
     
+    @State var currentPhase: String = ""
+    @State var themeColor: Color = (colors[""] ?? Color.tangerine)
+    @State private var userCoordinate: CLLocationCoordinate2D?
+    
     var body: some View {
         ZStack {
             if self.isActive {
-                ContentView()
+                ContentView(currentPhase: currentPhase, themeColor: colors[""] ?? Color.tangerine)
             } else {
                 ZStack {
                     Color.black
@@ -30,12 +35,9 @@ struct SplashView: View {
                         .ignoresSafeArea()
                     */
                     Label("Vizor", systemImage: "dot.viewfinder")
-                        .font(.bricolageGrotesque(size: 48, width: 100, weight: 600))
-                        .bold()
+                        .font(.custom("AntiqueSerie-Regular", size: 48))
                         .padding()
-                        .foregroundStyle(.tangerine)
-                        .background(.ultraThinMaterial.opacity(0.3))
-                        .clipShape(RoundedRectangle(cornerRadius: 18.0))
+                        .foregroundStyle(.sunrise)
                         
                 }
                 .ignoresSafeArea()
@@ -45,6 +47,9 @@ struct SplashView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                 withAnimation(.easeOut(duration: 0.2)) {
                     self.isActive = true
+                    CLLocationManager().requestWhenInUseAuthorization()
+                        currentPhase = updateCurrentPhase(for: userCoordinate ?? CLLocationCoordinate2D(latitude: 42, longitude: 27))
+                        themeColor = colors[currentPhase]!
                 }
             }
         }
