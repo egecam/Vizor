@@ -42,25 +42,17 @@ struct ContentView: View {
             .scrollIndicators(.hidden)
             .modifier(FullscreenScrollViewModifier())
             
-            // APP TITLE
-            HStack {
-                Label("Vizor", systemImage: "dot.viewfinder")
-                    .font(.bricolageGrotesque(size: 26, width: 100, weight: 600))
-                    .bold()
-                    .padding()
-                    .frame(height: 50)
-                    .background(.ultraThinMaterial)
-                    .clipShape(RoundedRectangle(cornerRadius: 18.0))
-                
-                Spacer()
+        }
+        .onAppear {
+            CLLocationManager().requestWhenInUseAuthorization()
+            DispatchQueue.main.async {
+                currentPhase = updateCurrentPhase(for: userCoordinate ?? CLLocationCoordinate2D(latitude: 42, longitude: 27))
+                themeColor = colors[currentPhase]!
             }
-            .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 0))
-            .offset(x: 0, y: -350)
         }
     }
-    
 }
 
 #Preview {
-    ContentView()
+    ContentView(currentPhase: "Golden Hour", themeColor: colors[""] ?? Color.tangerine)
 }
