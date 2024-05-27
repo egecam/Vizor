@@ -10,7 +10,6 @@
 		D42965CC2BF4C2590014CFC6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42965CB2BF4C2590014CFC6 /* LocationManager.swift */; };
 		D439EAC72BDAE9C600329989 /* SunKit in Frameworks */ = {isa = PBXBuildFile; productRef = D439EAC62BDAE9C600329989 /* SunKit */; };
 		D439EACA2BDAEA4500329989 /* SunKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D439EAC92BDAEA4500329989 /* SunKitManager.swift */; };
-		D443E4E22BF4D08D00E454D8 /* PhaseCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D443E4E12BF4D08D00E454D8 /* PhaseCalculator.swift */; };
 		D45A2AEC2BB35A2A009ABEF2 /* Phases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */; };
 		D4A346662BC47B1600EA3CC8 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A346652BC47B1600EA3CC8 /* Feed.swift */; };
 		D4A346682BC4829E00EA3CC8 /* Phase+Vizor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A346672BC4829E00EA3CC8 /* Phase+Vizor.swift */; };
@@ -56,7 +55,6 @@
 /* Begin PBXFileReference section */
 		D42965CB2BF4C2590014CFC6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D439EAC92BDAEA4500329989 /* SunKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunKitManager.swift; sourceTree = "<group>"; };
-		D443E4E12BF4D08D00E454D8 /* PhaseCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseCalculator.swift; sourceTree = "<group>"; };
 		D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phases.swift; sourceTree = "<group>"; };
 		D4A346652BC47B1600EA3CC8 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		D4A346672BC4829E00EA3CC8 /* Phase+Vizor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Phase+Vizor.swift"; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				D439EAC92BDAEA4500329989 /* SunKitManager.swift */,
-				D443E4E12BF4D08D00E454D8 /* PhaseCalculator.swift */,
 				D4F458AC2C0525BB0041ACEA /* CurrentPhaseHandler.swift */,
 			);
 			path = Model;
@@ -382,7 +379,6 @@
 				D4FE4A352BB20059001B7AC9 /* VizorApp.swift in Sources */,
 				D4FE4A862BB2302B001B7AC9 /* Fonts+Vizor.swift in Sources */,
 				D4A3466C2BC4879500EA3CC8 /* VCalendar.swift in Sources */,
-				D443E4E22BF4D08D00E454D8 /* PhaseCalculator.swift in Sources */,
 				D4FD6F412BECE819005D1B38 /* MapSheetView.swift in Sources */,
 				D439EACA2BDAEA4500329989 /* SunKitManager.swift in Sources */,
 			);
