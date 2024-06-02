@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D42965CC2BF4C2590014CFC6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42965CB2BF4C2590014CFC6 /* LocationManager.swift */; };
 		D439EAC72BDAE9C600329989 /* SunKit in Frameworks */ = {isa = PBXBuildFile; productRef = D439EAC62BDAE9C600329989 /* SunKit */; };
 		D439EACA2BDAEA4500329989 /* SunKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D439EAC92BDAEA4500329989 /* SunKitManager.swift */; };
 		D45A2AEC2BB35A2A009ABEF2 /* Phases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */; };
-		D4A346662BC47B1600EA3CC8 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A346652BC47B1600EA3CC8 /* Feed.swift */; };
+		D4A346662BC47B1600EA3CC8 /* FeedScaffold.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A346652BC47B1600EA3CC8 /* FeedScaffold.swift */; };
 		D4A346682BC4829E00EA3CC8 /* Phase+Vizor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A346672BC4829E00EA3CC8 /* Phase+Vizor.swift */; };
 		D4A3466A2BC482EF00EA3CC8 /* FullscreenScrollViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A346692BC482EF00EA3CC8 /* FullscreenScrollViewModifier.swift */; };
-		D4A3466C2BC4879500EA3CC8 /* VCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3466B2BC4879500EA3CC8 /* VCalendar.swift */; };
 		D4A3466E2BC49B4D00EA3CC8 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A3466D2BC49B4D00EA3CC8 /* SplashView.swift */; };
+		D4AC63392C0D13F700BF70F7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AC63382C0D13F700BF70F7 /* User.swift */; };
+		D4AC633B2C0D156600BF70F7 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AC633A2C0D156600BF70F7 /* SignInView.swift */; };
+		D4AC633D2C0D160400BF70F7 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AC633C2C0D160400BF70F7 /* Feed.swift */; };
+		D4AC633F2C0D25AD00BF70F7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AC633E2C0D25AD00BF70F7 /* LocationManager.swift */; };
 		D4B8094F2BC17E59008987FB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D4B8094E2BC17E59008987FB /* README.md */; };
 		D4E315252BCD91FB00336BAE /* Vollkorn-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4E315242BCD91FB00336BAE /* Vollkorn-Regular.ttf */; };
 		D4E315272BCDA0BB00336BAE /* FeedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E315262BCDA0BB00336BAE /* FeedElement.swift */; };
@@ -23,8 +25,7 @@
 		D4F458AD2C0525BB0041ACEA /* CurrentPhaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F458AC2C0525BB0041ACEA /* CurrentPhaseHandler.swift */; };
 		D4FD6F412BECE819005D1B38 /* MapSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD6F402BECE819005D1B38 /* MapSheetView.swift */; };
 		D4FE4A352BB20059001B7AC9 /* VizorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A342BB20059001B7AC9 /* VizorApp.swift */; };
-		D4FE4A372BB20059001B7AC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A362BB20059001B7AC9 /* ContentView.swift */; };
-		D4FE4A392BB20059001B7AC9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A382BB20059001B7AC9 /* Item.swift */; };
+		D4FE4A372BB20059001B7AC9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A362BB20059001B7AC9 /* Home.swift */; };
 		D4FE4A3B2BB2005B001B7AC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4FE4A3A2BB2005B001B7AC9 /* Assets.xcassets */; };
 		D4FE4A3E2BB2005B001B7AC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4FE4A3D2BB2005B001B7AC9 /* Preview Assets.xcassets */; };
 		D4FE4A482BB2005B001B7AC9 /* VizorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE4A472BB2005B001B7AC9 /* VizorTests.swift */; };
@@ -53,14 +54,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D42965CB2BF4C2590014CFC6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D439EAC92BDAEA4500329989 /* SunKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunKitManager.swift; sourceTree = "<group>"; };
 		D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phases.swift; sourceTree = "<group>"; };
-		D4A346652BC47B1600EA3CC8 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		D4A346652BC47B1600EA3CC8 /* FeedScaffold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedScaffold.swift; sourceTree = "<group>"; };
 		D4A346672BC4829E00EA3CC8 /* Phase+Vizor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Phase+Vizor.swift"; sourceTree = "<group>"; };
 		D4A346692BC482EF00EA3CC8 /* FullscreenScrollViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenScrollViewModifier.swift; sourceTree = "<group>"; };
-		D4A3466B2BC4879500EA3CC8 /* VCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCalendar.swift; sourceTree = "<group>"; };
-		D4A3466D2BC49B4D00EA3CC8 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashView.swift; path = ../SplashView.swift; sourceTree = "<group>"; };
+		D4A3466D2BC49B4D00EA3CC8 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		D4AC63382C0D13F700BF70F7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D4AC633A2C0D156600BF70F7 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		D4AC633C2C0D160400BF70F7 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		D4AC633E2C0D25AD00BF70F7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D4B8094E2BC17E59008987FB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D4E315242BCD91FB00336BAE /* Vollkorn-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vollkorn-Regular.ttf"; sourceTree = "<group>"; };
 		D4E315262BCDA0BB00336BAE /* FeedElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedElement.swift; sourceTree = "<group>"; };
@@ -69,8 +72,7 @@
 		D4FD6F402BECE819005D1B38 /* MapSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSheetView.swift; sourceTree = "<group>"; };
 		D4FE4A312BB20059001B7AC9 /* Vizor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vizor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FE4A342BB20059001B7AC9 /* VizorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VizorApp.swift; sourceTree = "<group>"; };
-		D4FE4A362BB20059001B7AC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D4FE4A382BB20059001B7AC9 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		D4FE4A362BB20059001B7AC9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		D4FE4A3A2BB2005B001B7AC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4FE4A3D2BB2005B001B7AC9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D4FE4A432BB2005B001B7AC9 /* VizorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VizorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,19 +112,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D42965CA2BF4C23D0014CFC6 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				D42965CB2BF4C2590014CFC6 /* LocationManager.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		D439EAC82BDAEA1A00329989 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				D439EAC92BDAEA4500329989 /* SunKitManager.swift */,
 				D4F458AC2C0525BB0041ACEA /* CurrentPhaseHandler.swift */,
+				D4AC63382C0D13F700BF70F7 /* User.swift */,
+				D4AC633E2C0D25AD00BF70F7 /* LocationManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,15 +126,32 @@
 		D45A2AE82BB35973009ABEF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D4FE4A362BB20059001B7AC9 /* ContentView.swift */,
-				D4A3466D2BC49B4D00EA3CC8 /* SplashView.swift */,
-				D4A3466B2BC4879500EA3CC8 /* VCalendar.swift */,
-				D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */,
-				D4A346652BC47B1600EA3CC8 /* Feed.swift */,
-				D4E315262BCDA0BB00336BAE /* FeedElement.swift */,
-				D4FD6F402BECE819005D1B38 /* MapSheetView.swift */,
+				D4AC63362C0CE98400BF70F7 /* Home */,
+				D4AC63372C0CE99B00BF70F7 /* Feed */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D4AC63362C0CE98400BF70F7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D4FE4A362BB20059001B7AC9 /* Home.swift */,
+				D45A2AEB2BB35A2A009ABEF2 /* Phases.swift */,
+				D4FD6F402BECE819005D1B38 /* MapSheetView.swift */,
+				D4A3466D2BC49B4D00EA3CC8 /* SplashView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D4AC63372C0CE99B00BF70F7 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				D4A346652BC47B1600EA3CC8 /* FeedScaffold.swift */,
+				D4E315262BCDA0BB00336BAE /* FeedElement.swift */,
+				D4AC633A2C0D156600BF70F7 /* SignInView.swift */,
+				D4AC633C2C0D160400BF70F7 /* Feed.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		D4B8094B2BC1742E008987FB /* ViewModifiers */ = {
@@ -175,12 +188,10 @@
 			children = (
 				D4FE4A632BB21454001B7AC9 /* Info.plist */,
 				D4FE4A342BB20059001B7AC9 /* VizorApp.swift */,
-				D4FE4A382BB20059001B7AC9 /* Item.swift */,
 				D4FE4A852BB2302B001B7AC9 /* Fonts+Vizor.swift */,
 				D4A346672BC4829E00EA3CC8 /* Phase+Vizor.swift */,
 				D439EAC82BDAEA1A00329989 /* Model */,
 				D45A2AE82BB35973009ABEF2 /* View */,
-				D42965CA2BF4C23D0014CFC6 /* ViewModel */,
 				D4B8094B2BC1742E008987FB /* ViewModifiers */,
 				D4FE4A3A2BB2005B001B7AC9 /* Assets.xcassets */,
 				D4FE4A3C2BB2005B001B7AC9 /* Preview Content */,
@@ -366,19 +377,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4FE4A372BB20059001B7AC9 /* ContentView.swift in Sources */,
+				D4FE4A372BB20059001B7AC9 /* Home.swift in Sources */,
+				D4AC633F2C0D25AD00BF70F7 /* LocationManager.swift in Sources */,
 				D4A3466E2BC49B4D00EA3CC8 /* SplashView.swift in Sources */,
-				D42965CC2BF4C2590014CFC6 /* LocationManager.swift in Sources */,
 				D45A2AEC2BB35A2A009ABEF2 /* Phases.swift in Sources */,
 				D4A346682BC4829E00EA3CC8 /* Phase+Vizor.swift in Sources */,
 				D4E315272BCDA0BB00336BAE /* FeedElement.swift in Sources */,
 				D4F458AD2C0525BB0041ACEA /* CurrentPhaseHandler.swift in Sources */,
 				D4A3466A2BC482EF00EA3CC8 /* FullscreenScrollViewModifier.swift in Sources */,
-				D4FE4A392BB20059001B7AC9 /* Item.swift in Sources */,
-				D4A346662BC47B1600EA3CC8 /* Feed.swift in Sources */,
+				D4AC633D2C0D160400BF70F7 /* Feed.swift in Sources */,
+				D4AC63392C0D13F700BF70F7 /* User.swift in Sources */,
+				D4A346662BC47B1600EA3CC8 /* FeedScaffold.swift in Sources */,
 				D4FE4A352BB20059001B7AC9 /* VizorApp.swift in Sources */,
+				D4AC633B2C0D156600BF70F7 /* SignInView.swift in Sources */,
 				D4FE4A862BB2302B001B7AC9 /* Fonts+Vizor.swift in Sources */,
-				D4A3466C2BC4879500EA3CC8 /* VCalendar.swift in Sources */,
 				D4FD6F412BECE819005D1B38 /* MapSheetView.swift in Sources */,
 				D439EACA2BDAEA4500329989 /* SunKitManager.swift in Sources */,
 			);
@@ -548,6 +560,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Vizor/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This application needs your location to calculate the daylight phases.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This application needs your location to calculate the daylight phases in background.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This application needs your location to calculate the daylight phases.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -579,6 +593,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Vizor/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This application needs your location to calculate the daylight phases.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This application needs your location to calculate the daylight phases in background.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This application needs your location to calculate the daylight phases.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

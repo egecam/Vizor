@@ -31,7 +31,7 @@ struct MapSheetView: View {
                             MapUserLocationButton()
                         }
                     
-                        
+                    
                     Button {
                         if let location = locationManager.userLocation {
                             onLocationSelected(location.coordinate)
@@ -48,7 +48,7 @@ struct MapSheetView: View {
                                 .bold()
                         }
                     }
-
+                    
                 }
                 
                 Spacer()

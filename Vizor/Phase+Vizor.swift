@@ -33,17 +33,3 @@ func getPhaseList(currentPhase: String) -> Array<String> {
     
     return phases
 }
-
-func setTheme(dynamicPreference: Bool, theme: Color) -> Color {
-    if dynamicPreference == true {
-        let theme = theme
-        return theme
-    }
-    else {
-        let theme = Color.tangerine
-        return theme
-    }
-}
-
-var previewPhase = "Golden Hour"
-var previewColor = Color.goldenhour
