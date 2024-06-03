@@ -34,8 +34,6 @@ func calculatePhase(for location: CLLocation) -> String {
     }
     
     switch now {
-    case ..<sunrise:
-        return "Night"
     case sunrise..<goldenHour:
         return "Sunrise"
     case goldenHour..<blueHour:
