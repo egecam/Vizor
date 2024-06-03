@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct Feed: View {
+    @Environment(\.modelContext) var modelContext
+    @Query var posts: [Post]
+    
     @State private var showingHeader = true
     @State private var turningPoint = CGFloat.zero
     
