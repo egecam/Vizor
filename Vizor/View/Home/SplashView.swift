@@ -14,13 +14,13 @@ struct SplashView: View {
     @State var isActive: Bool = false
     
     @State var currentPhase: String = ""
-    @State var themeColor: Color = colors["Unknown"] ?? Color.tangerine
-    @State private var userCoordinate: CLLocationCoordinate2D?
+    @State var themeColor: Color = (colors[""] ?? Color.tangerine)
+    @State var userCoordinate: CLLocationCoordinate2D?
     
     var body: some View {
         ZStack {
             if self.isActive {
-                Home(currentPhase: currentPhase, themeColor: themeColor)
+                Home(currentPhase: currentPhase, themeColor: colors[""] ?? Color.tangerine)
             } else {
                 ZStack {
                     Color.black
@@ -35,30 +35,41 @@ struct SplashView: View {
             }
         }
         .onAppear {
-            locationManager.requestLocationAuthorization()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                withAnimation(.easeOut(duration: 0.2)) {
+                    if locationManager.authorizationStatus == .notDetermined {
+                        locationManager.startUpdatingLocation()
+                    } else {
+                        handleLocationUpdate()
+                    }
+                }
+            }
         }
-        .onReceive(locationManager.$userLocation) { location in
-            guard let location = location else { return }
+        .onChange(of: locationManager.authorizationStatus) { status in
+            if status == .authorizedWhenInUse || status == .authorizedAlways {
+                handleLocationUpdate()
+            }
+        }
+    }
+    
+    private func handleLocationUpdate() {
+        if let location = locationManager.userLocation {
             userCoordinate = location.coordinate
-            currentPhase = updateCurrentPhase(for: userCoordinate ?? CLLocationCoordinate2D(latitude: 42, longitude: 27))
-            
-            if let newThemeColor = colors[currentPhase] {
-                themeColor = newThemeColor
-            } else {
-                themeColor = Color.tangerine
-            }
-            self.isActive = true
+        } else {
+            // Varsayılan konumu kullan
+            userCoordinate = CLLocationCoordinate2D(latitude: 42, longitude: 27)
         }
-        .onReceive(locationManager.$locationError) { error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-                // Handle the error accordingly
-            }
+        currentPhase = updateCurrentPhase(for: userCoordinate ?? CLLocationCoordinate2D(latitude: 42, longitude: 27))
+        
+        if let newThemeColor = colors[currentPhase] {
+            themeColor = newThemeColor
+        } else {
+            themeColor = Color.tangerine
         }
+        self.isActive = true
     }
 }
 
 #Preview {
     SplashView()
 }
-
