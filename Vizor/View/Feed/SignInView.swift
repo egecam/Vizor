@@ -72,7 +72,7 @@ struct SignInView: View {
                             }
                             
                             HStack {
-                                Button("Do you already have an account?") {
+                                Button("Already have an account?") {
                                     isSignUpViewCalled.toggle()
                                 }
                                 .frame(width: 100)
@@ -82,7 +82,8 @@ struct SignInView: View {
                                 
                                 NavigationLink(destination: Feed().onAppear {
                                     do {
-                                        try User(username: username, password: password, email: email, avatar: "").modelContext?.save()
+                                        
+                                        try User(username: username, password: password, email: email).modelContext?.save()
                                     } catch {
                                         print("Failed to create a user instance.")
                                     }
