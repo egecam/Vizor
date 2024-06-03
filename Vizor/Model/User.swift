@@ -15,12 +15,12 @@ class User {
     var password: String
     var email: String
     var avatar: String?
+    var posts: [Post]?
     
-    init(id: UUID = UUID(), username: String, password: String, email: String, avatar: String?) {
+    init(id: UUID = UUID(), username: String, password: String, email: String) {
         self.id = id
         self.username = username
         self.password = password
         self.email = email
-        self.avatar = avatar
     }
 }
