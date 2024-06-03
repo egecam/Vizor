@@ -9,14 +9,25 @@ import SwiftUI
 import SwiftData
 
 struct SignInView: View {
-    @Environment(\.modelContext) var modelContext
-    
-    @Query var users: [User]
     @Binding var isUserLoggedIn: Bool
     @State var isSignUpViewCalled: Bool = true
+    
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var email: String = ""
+    
+    @State private var showAlert: Bool = false
+    @State private var alertMessage: String = ""
+    
+    
+    func signUp() async throws {
+        guard !email.isEmpty, !password.isEmpty else {
+            print("Email or password is empty.")
+            return
+        }
+        
+        try await AuthenticationManager.shared.createUser(email: email, password: password)
+    }
     
     var body: some View {
         
@@ -44,33 +55,34 @@ struct SignInView: View {
                     }
                     
                     VStack(alignment: .center) {
-                        ZStack {
+                        /* ZStack {
                             Color.gray.opacity(0.2)
                             
                             TextField("", text: $username, prompt: Text("Username").foregroundStyle(.white.opacity(0.25)))
                         }
                         .frame(width: 200, height: 35)
                         .clipShape(.rect(cornerRadius: 10.0))
+                        */
                         
-                        ZStack {
-                            Color.gray.opacity(0.2)
-                            
-                            TextField("", text: $password, prompt: Text("Password").foregroundStyle(.white.opacity(0.25)))
-                        }
-                        .frame(width: 200, height: 35)
-                        .clipShape(.rect(cornerRadius: 10.0))
-                        
-                        if isSignUpViewCalled {
-                            VStack {
-                                ZStack {
-                                    Color.gray.opacity(0.2)
-                                    
-                                    TextField("", text: $email, prompt: Text("E-mail").foregroundStyle(.white.opacity(0.25)))
-                                }
-                                .frame(width: 200, height: 35)
-                                .clipShape(.rect(cornerRadius: 10.0))
+                        VStack {
+                            ZStack {
+                                Color.gray.opacity(0.2)
+                                
+                                TextField("", text: $email, prompt: Text("E-mail").foregroundStyle(.white.opacity(0.25)))
                             }
+                            .frame(width: 200, height: 35)
+                            .clipShape(.rect(cornerRadius: 10.0))
                             
+                            
+                            ZStack {
+                                Color.gray.opacity(0.2)
+                                
+                                TextField("", text: $password, prompt: Text("Password").foregroundStyle(.white.opacity(0.25)))
+                            }
+                            .frame(width: 200, height: 35)
+                            .clipShape(.rect(cornerRadius: 10.0))
+                        }
+                        if isSignUpViewCalled {
                             HStack {
                                 Button("Already have an account?") {
                                     isSignUpViewCalled.toggle()
@@ -79,16 +91,17 @@ struct SignInView: View {
                                 .foregroundStyle(.gray)
                                 .padding()
                                 
-                                
-                                NavigationLink(destination: Feed().onAppear {
-                                    do {
-                                        
-                                        try User(username: username, password: password, email: email).modelContext?.save()
-                                    } catch {
-                                        print("Failed to create a user instance.")
+                                // MARK: SIGN UP BUTTON
+                                NavigationLink(destination: Feed(isUserLoggedIn: $isUserLoggedIn).onAppear {
+                                    Task {
+                                        do {
+                                            try await signUp()
+                                            isUserLoggedIn = true
+                                        } catch {
+                                            
+                                        }
                                     }
                                     
-                                    isUserLoggedIn.toggle()
                                 }) {
                                     Text("Sign Up")
                                         .foregroundStyle(.sunrise)
@@ -106,8 +119,9 @@ struct SignInView: View {
                                 .foregroundStyle(.gray)
                                 .padding()
                                 
-                                NavigationLink(destination: Feed().onAppear {
-                                    isUserLoggedIn.toggle()
+                                // MARK: SIGN IN BUTTON
+                                NavigationLink(destination: Feed(isUserLoggedIn: $isUserLoggedIn).onAppear {
+                                    isUserLoggedIn = true
                                 }) {
                                     Text("Sign In")
                                         .foregroundStyle(.sunrise)
@@ -121,7 +135,11 @@ struct SignInView: View {
                 }
                 .foregroundStyle(.white)
             }
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            }
         }
+        .navigationBarBackButtonHidden()
     }
 }
 
