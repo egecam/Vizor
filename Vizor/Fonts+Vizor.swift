@@ -12,7 +12,6 @@ import VFont
 extension Font {
     static func vollkorn(size: CGFloat, width: CGFloat = 0, weight: CGFloat = 0) -> Font {
         return .vFont("Vollkorn", size: size, axes: [
-            2003072104: width,
             2003265652: weight
         ])
     }
@@ -20,7 +19,6 @@ extension Font {
     
     static func overused(size: CGFloat, width: CGFloat = 0, weight: CGFloat = 0) -> Font {
         return .vFont("Overused Grotesk", size: size, axes: [
-            2003072104: width,
             2003265652: weight
         ])
     }
