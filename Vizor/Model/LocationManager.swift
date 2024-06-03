@@ -19,33 +19,30 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         super.init()
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-    }
-    
-    func requestLocationAuthorization() {
         self.locationManager.requestWhenInUseAuthorization()
     }
     
     func startUpdatingLocation() {
         DispatchQueue.global().async {
             if CLLocationManager.locationServicesEnabled() {
-                switch self.locationManager.authorizationStatus {
+                switch self.authorizationStatus {
+                case .notDetermined:
+                    self.locationManager.requestWhenInUseAuthorization()
                 case .authorizedWhenInUse, .authorizedAlways:
                     self.locationManager.startUpdatingLocation()
-                case .notDetermined:
-                    self.requestLocationAuthorization()
-                case .restricted, .denied:
+                case .denied, .restricted:
                     // Handle case where location access is denied or restricted
-                    print("Location access denied or restricted")
                     self.locationError = NSError(domain: "LocationError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Location access denied or restricted"])
-                default:
-                    break
+                @unknown default:
+                    // Handle any future cases that may be added
+                    self.locationError = NSError(domain: "LocationError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Unknown authorization status"])
                 }
             } else {
-                print("Location services are not enabled")
-                self.locationError = NSError(domain: "LocationError", code: 2, userInfo: [NSLocalizedDescriptionKey: "Location services are not enabled"])
+                self.locationError = NSError(domain: "LocationError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Location services are not enabled"])
             }
         }
     }
+    
     
     func stopUpdatingLocation() {
         self.locationManager.stopUpdatingLocation()
@@ -62,8 +59,22 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         self.locationError = error
     }
     
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        self.authorizationStatus = manager.authorizationStatus
-        self.startUpdatingLocation()
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        self.authorizationStatus = status
+        
+        switch status {
+        case .authorizedWhenInUse, .authorizedAlways:
+            self.startUpdatingLocation()
+        case .denied, .restricted:
+            // Handle case where location access is denied or restricted
+            self.locationError = NSError(domain: "LocationError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Location access denied or restricted"])
+        case .notDetermined:
+            // Do nothing, will be handled in startUpdatingLocation
+            break
+        @unknown default:
+            // Handle any future cases that may be added
+            self.locationError = NSError(domain: "LocationError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Unknown authorization status"])
+        }
     }
 }
+
