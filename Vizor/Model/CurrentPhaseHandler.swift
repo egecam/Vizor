@@ -8,10 +8,11 @@
 import Foundation
 import CoreLocation
 
-func updateCurrentPhase(for coordinate: CLLocationCoordinate2D) -> String {
-    var currentPhase: String = ""
+func updateCurrentPhase(for coordinate: CLLocationCoordinate2D?) -> String {
+    guard let coordinate = coordinate else {
+        return "Unknown"
+    }
     let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-    currentPhase = calculatePhase(for: location)
-    
-    return currentPhase
+    return calculatePhase(for: location)
 }
+
