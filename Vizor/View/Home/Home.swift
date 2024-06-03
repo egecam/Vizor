@@ -42,14 +42,6 @@ struct Home: View {
             .defaultScrollAnchor(.leading)
             .scrollIndicators(.hidden)
             .modifier(FullscreenScrollViewModifier())
-            
-        }
-        .onAppear {
-            CLLocationManager().requestWhenInUseAuthorization()
-            DispatchQueue.main.async {
-                currentPhase = updateCurrentPhase(for: userCoordinate ?? CLLocationCoordinate2D(latitude: 42, longitude: 27))
-                themeColor = colors[currentPhase]!
-            }
         }
     }
 }
