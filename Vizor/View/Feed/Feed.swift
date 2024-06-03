@@ -9,13 +9,16 @@ import SwiftUI
 import SwiftData
 
 struct Feed: View {
-    @Environment(\.modelContext) var modelContext
-    @Query var posts: [Post]
-    
     @State private var showingHeader = true
     @State private var turningPoint = CGFloat.zero
     
+    @Binding var isUserLoggedIn: Bool
+    
     let thresholdScrollDistance: CGFloat = 50
+    
+    func signOut() throws {
+        try AuthenticationManager.shared.signOut()
+    }
     
     var body: some View {
         VStack {
@@ -32,6 +35,23 @@ struct Feed: View {
                     .safeAreaPadding()
                     
                     Spacer()
+                    
+                    NavigationLink(destination: FeedScaffold().onAppear {
+                        Task {
+                            do {
+                                try signOut()
+                                isUserLoggedIn = false
+                            } catch {
+                                print(error)
+                            }
+                        }
+                    }) {
+                        Text("Log Out")
+                            .foregroundStyle(.white)
+                            .bold()
+                            .padding()
+                    }
+                    .buttonStyle(BorderlessButtonStyle())
                 }
                 .transition(
                     .asymmetric(
@@ -86,5 +106,5 @@ struct Feed: View {
 }
 
 #Preview {
-    Feed()
+    Feed(isUserLoggedIn: .constant(false))
 }
