@@ -33,7 +33,7 @@ struct Home: View {
                             .containerRelativeFrame(.horizontal)
                     }
                     
-                    FeedScaffold()
+                    RootView()
                         .padding(.top, 50)
                         .background(.black)
                         .containerRelativeFrame(.horizontal)

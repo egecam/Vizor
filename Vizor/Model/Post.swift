@@ -2,31 +2,24 @@
 //  Post.swift
 //  Vizor
 //
-//  Created by Ege Çam on 3.06.2024.
+//  Created by Ege Çam on 11.06.2024.
 //
 
 import Foundation
-import SwiftData
+import FirebaseFirestoreSwift
 
-@Model
-class Post {
-    var id = UUID()
+struct Post: Identifiable, Codable {
+    @DocumentID var id: String?
+    var imageURL: String
     var title: String
-    var image: String
-    var createdBy: User
-    var likes: Int
+    var timestamp: Date
+    var userID: String
     
-    init(id: UUID = UUID(), title: String, image: String, createdBy: User, likes: Int = 0) {
-        self.id = id
+    init(imageURL: String, title: String, timestamp: Date, userID: String) {
+        self.imageURL = imageURL
         self.title = title
-        self.image = image
-        self.createdBy = createdBy
-        self.likes = likes
-    }
-    
-    func increaseLikes(likes: inout Int) -> Int {
-        likes += 1
-        self.likes = likes
-        return self.likes
+        self.timestamp = timestamp
+        self.userID = userID
     }
 }
+

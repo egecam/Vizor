@@ -1,39 +1,62 @@
 //
-//  SignUpView.swift
+//  SignInView.swift
 //  Vizor
 //
-//  Created by Ege Çam on 3.06.2024.
+//  Created by Ege Çam on 11.06.2024.
 //
 
 import SwiftUI
-import SwiftData
 
-struct SignInView: View {
-    @Binding var isUserLoggedIn: Bool
-    @State var isSignUpViewCalled: Bool = true
-    
-    @State private var username: String = ""
-    @State private var password: String = ""
-    @State private var email: String = ""
-    
-    @State private var showAlert: Bool = false
-    @State private var alertMessage: String = ""
-    
+@MainActor
+final class SignInViewModel: ObservableObject {
+    @Published var email = ""
+    @Published var password = ""
+    @Published var errorMessage: String? = nil
     
     func signUp() async throws {
-        guard !email.isEmpty, !password.isEmpty else {
-            print("Email or password is empty.")
+        guard !email.isEmpty, !password.isEmpty else  {
+            errorMessage = "No email of password found."
             return
         }
         
-        try await AuthenticationManager.shared.createUser(email: email, password: password)
+        do {
+            try await AuthenticationManager.shared.createUser(email: email, password: password)
+        } catch {
+            errorMessage = error.localizedDescription
+        }
+        
+        
     }
+    
+    func signIn() async throws {
+        guard !email.isEmpty, !password.isEmpty else  {
+            errorMessage = "No email or password found."
+            return
+        }
+        
+        do {
+            try await AuthenticationManager.shared.signIn(email: email, password: password)
+        } catch {
+            errorMessage = error.localizedDescription
+        }
+        
+        
+    }
+}
+
+struct SignInView: View {
+    @StateObject private var viewModel = SignInViewModel()
+    @State private var signUpCalled: Bool = true
+    
+    @Binding var showSignInView: Bool
+    
     
     var body: some View {
         
         NavigationStack {
             ZStack {
-                Color.black.ignoresSafeArea()
+                Color.black
+                    .ignoresSafeArea()
                 
                 VStack {
                     VStack {
@@ -55,57 +78,49 @@ struct SignInView: View {
                     }
                     
                     VStack(alignment: .center) {
-                        /* ZStack {
-                            Color.gray.opacity(0.2)
-                            
-                            TextField("", text: $username, prompt: Text("Username").foregroundStyle(.white.opacity(0.25)))
-                        }
-                        .frame(width: 200, height: 35)
-                        .clipShape(.rect(cornerRadius: 10.0))
-                        */
-                        
                         VStack {
                             ZStack {
                                 Color.gray.opacity(0.2)
                                 
-                                TextField("", text: $email, prompt: Text("E-mail").foregroundStyle(.white.opacity(0.25)))
+                                TextField("", text: $viewModel.email, prompt: Text("E-mail").foregroundStyle(.white.opacity(0.25)))
                             }
                             .frame(width: 200, height: 35)
                             .clipShape(.rect(cornerRadius: 10.0))
-                            
                             
                             ZStack {
                                 Color.gray.opacity(0.2)
                                 
-                                TextField("", text: $password, prompt: Text("Password").foregroundStyle(.white.opacity(0.25)))
+                                TextField("", text: $viewModel.password, prompt: Text("Password").foregroundStyle(.white.opacity(0.25)))
                             }
                             .frame(width: 200, height: 35)
                             .clipShape(.rect(cornerRadius: 10.0))
                         }
-                        if isSignUpViewCalled {
+                        
+                        if signUpCalled {
                             HStack {
                                 Button("Already have an account?") {
-                                    isSignUpViewCalled.toggle()
+                                    signUpCalled.toggle()
                                 }
                                 .frame(width: 100)
                                 .foregroundStyle(.gray)
                                 .padding()
                                 
                                 // MARK: SIGN UP BUTTON
-                                NavigationLink(destination: Feed(isUserLoggedIn: $isUserLoggedIn).onAppear {
+                                Button {
                                     Task {
                                         do {
-                                            try await signUp()
-                                            isUserLoggedIn = true
+                                            try await viewModel.signUp()
+                                            showSignInView = false
+                                            return
                                         } catch {
                                             
                                         }
                                     }
-                                    
-                                }) {
+                                } label: {
                                     Text("Sign Up")
-                                        .foregroundStyle(.sunrise)
                                 }
+                                .foregroundStyle(.sunrise)
+                                
                                 .buttonStyle(BorderedButtonStyle())
                                 .padding()
                             }
@@ -113,21 +128,35 @@ struct SignInView: View {
                         } else {
                             HStack {
                                 Button("Don't have an account?") {
-                                    isSignUpViewCalled.toggle()
+                                    signUpCalled.toggle()
                                 }
                                 .frame(width: 100)
                                 .foregroundStyle(.gray)
                                 .padding()
                                 
                                 // MARK: SIGN IN BUTTON
-                                NavigationLink(destination: Feed(isUserLoggedIn: $isUserLoggedIn).onAppear {
-                                    isUserLoggedIn = true
-                                }) {
+                                
+                                Button {
+                                    Task {
+                                        do {
+                                            try await viewModel.signIn()
+                                            showSignInView = false
+                                            return
+                                        } catch {
+                                            
+                                        }
+                                    }
+                                } label: {
                                     Text("Sign In")
-                                        .foregroundStyle(.sunrise)
                                 }
+                                .foregroundStyle(.sunrise)
                                 .buttonStyle(BorderedButtonStyle())
                                 .padding()
+                            }
+                            .foregroundStyle(.white)
+                            
+                            if let errorMessage = viewModel.errorMessage {
+                                Text(errorMessage).foregroundStyle(.red)
                             }
                         }
                     }
@@ -135,14 +164,13 @@ struct SignInView: View {
                 }
                 .foregroundStyle(.white)
             }
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-            }
         }
+        .padding()
         .navigationBarBackButtonHidden()
+        .background(.black)
     }
 }
 
 #Preview {
-    SignInView(isUserLoggedIn: .constant(false))
+    SignInView(showSignInView: .constant(false))
 }
