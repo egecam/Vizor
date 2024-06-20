@@ -2,8 +2,7 @@
 
 <div align="center">
 
-<img height="110" alt="vizor" src="[https://user-images.githubusercontent.com/55358113/192140073-de19a887-b6e8-49b8-bba2-142df171df3e.png](https://github.com/egecam/Vizor/assets/23506587/fd5ee955-78b1-4b50-9238-0c3b5e4d818f)">
-
+![vizor](https://github.com/egecam/Vizor/assets/23506587/01dee2e6-96e3-449d-9ae0-4a8088cd647c)
 
 [![Swift Version](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org)
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](https://developer.apple.com/ios/)
