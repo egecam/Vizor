@@ -1,22 +1,79 @@
-#  Vizor: Your Pocket Viewfinder
+# Vizor
 
-### Overview
-Vizor is an iOS application for photographers and sky enthusiasts. The application is developed with Swift and SwiftUI by considering Apple's design and development guidelines.
+[![Swift Version](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org)
+[![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](https://developer.apple.com/ios/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Vizor consists of 3 main tabs: **Calendar, Daylight Phases (main tab)** and **Feed**. **Calendar** tab is designed for a simpler view of astronomical events of the month. **Daylight Phases**, as the main tab, presents the 5 phases of the sun: Sunrise, sunset, golden hour, blue hour and civil twilight. **Feed** tab is the place where users may share their photography work and view others'.
+Vizor is a mobile application designed for photographers, developed for the iOS platform using Swift. It leverages both SwiftUI and UIKit for user interface development and uses Firebase as a cloud-based backend solution. Vizor adheres to Apple's Human Interface Guidelines.
 
-1. Structure
-	1. Package Dependencies
-	2. Models
-	3. Views
-		1. View Modifiers
-	4. Workers and Helpers
-2. Design
-	1. Typefaces
-	2. Colors
-	3. Layout
-3. Debugging
-4. Testing
-5. Screenshots and sample operations
+## Features
+
+- **SwiftUI and UIKit**: Utilized for creating a dynamic and responsive user interface.
+- **Firebase**: Integrated for backend services.
+- **SunKit**: Used for daylight-related astronomical calculations.
+- **vFont**: Implements variable typefaces for enhanced typography.
+
+## Getting Started
+
+### Prerequisites
+
+- iOS 13.0+
+- Xcode 11+
+- CocoaPods or Swift Package Manager for dependency management
+
+### Installation
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/Vizor.git
+    cd Vizor
+    ```
+2. Install dependencies using CocoaPods:
+    ```sh
+    pod install
+    ```
+    Or using Swift Package Manager, open `Vizor.xcodeproj` and add the packages:
+    - [Firebase iOS SDK](https://github.com/firebase/firebase-ios-sdk)
+    - [SunKit](https://github.com/Sunlitt/SunKit)
+    - [vFont](https://github.com/dufflink/vfont)
+
+3. Open the `.xcworkspace` file in Xcode:
+    ```sh
+    open Vizor.xcworkspace
+    ```
+
+### Running the App
+
+Build and run the app on your device or simulator from Xcode.
+
+## Architecture
+
+Vizor follows the Model-View-ViewModel (MVVM) pattern.
+
+### Models
+
+- **SunKit Manager**: Handles astronomical calculations related to daylight phases.
+  - `getPhaseTimeList(location: CLLocation) -> [String: Date]`: Initializes a sun object and calculates times based on the location.
+  - `calculatePhase(location: CLLocation) -> String`: Returns the current phase title based on location and time.
+
+- **Location Manager**: Manages location authorization and user's location calculations.
+
+### Views
+
+- **Home View**: Displays an overview of the current phase and a list of upcoming phases.
+
+## Contributing
+
+Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) for more details.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- [Firebase iOS SDK](https://github.com/firebase/firebase-ios-sdk)
+- [SunKit](https://github.com/Sunlitt/SunKit)
+- [vFont](https://github.com/dufflink/vfont)
 
 ---
