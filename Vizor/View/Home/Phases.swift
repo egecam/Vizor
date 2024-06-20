@@ -72,25 +72,14 @@ struct Phases: View {
                 
             }
             
-            // MARK: IN PROGRESS
-            /*
-             
-            .refreshable {
-                DispatchQueue.main.async {
-                    self.phaseTimeList = getPhaseTimeList(day: Date.now, location: CLLocation(latitude: userCoordinate?.latitude ?? 41.00, longitude: userCoordinate?.longitude ?? 28.54)).mapValues { date in
-                        let formatter = DateFormatter()
-                        formatter.timeStyle = .short
-                        formatter.dateStyle = .none
-                        return formatter.string(from: date)
-                    }
-                }
-            }
-             
-             */
             .modifier(FullscreenScrollViewModifier())
             .onAppear {
                 DispatchQueue.main.async {
-                    self.phaseTimeList = getPhaseTimeList(day: Date.now, location: CLLocation(latitude: userCoordinate?.latitude ?? 41.00, longitude: userCoordinate?.longitude ?? 28.54)).mapValues { date in
+                    self.phaseTimeList = getPhaseTimeList(
+                        day: Date.now,
+                        location: CLLocation(
+                            latitude: userCoordinate?.latitude ?? 41.00,
+                            longitude: userCoordinate?.longitude ?? 28.54)).mapValues { date in
                         let formatter = DateFormatter()
                         formatter.timeStyle = .short
                         formatter.dateStyle = .none

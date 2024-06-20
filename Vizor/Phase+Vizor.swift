@@ -22,7 +22,12 @@ var opacityLevels = [
 ]
 
 func getPhaseList(currentPhase: String) -> Array<String> {
-    var phases: Array<String> = ["Sunrise", "Golden Hour", "Blue Hour", "Twilight"]
+    var phases: Array<String> = [
+        "Sunrise",
+        "Golden Hour",
+        "Blue Hour",
+        "Twilight"
+    ]
     
     for phase in 0...phases.count {
         if phases[phase] == currentPhase {

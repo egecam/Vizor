@@ -10,17 +10,29 @@ import SwiftUI
 import VFont
 
 extension Font {
-    static func vollkorn(size: CGFloat, width: CGFloat = 0, weight: CGFloat = 0) -> Font {
+    static func vollkorn(
+        size: CGFloat,
+        width: CGFloat = 0,
+        weight: CGFloat = 0
+    ) -> Font {
+        
         return .vFont("Vollkorn", size: size, axes: [
             2003265652: weight
         ])
+        
     }
     
     
-    static func overused(size: CGFloat, width: CGFloat = 0, weight: CGFloat = 0) -> Font {
+    static func overused(
+        size: CGFloat,
+        width: CGFloat = 0,
+        weight: CGFloat = 0
+    ) -> Font {
+        
         return .vFont("Overused Grotesk", size: size, axes: [
             2003265652: weight
         ])
+        
     }
 }
 

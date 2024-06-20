@@ -47,5 +47,5 @@ struct Home: View {
 }
 
 #Preview {
-    Home(currentPhase: "Golden Hour", themeColor: colors[""] ?? Color.tangerine)
+    Home(currentPhase: "Twilight", themeColor: colors[""] ?? Color.twilight)
 }

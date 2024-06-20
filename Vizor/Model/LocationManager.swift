@@ -31,14 +31,21 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
                 case .authorizedWhenInUse, .authorizedAlways:
                     self.locationManager.startUpdatingLocation()
                 case .denied, .restricted:
-                    // Handle case where location access is denied or restricted
-                    self.locationError = NSError(domain: "LocationError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Location access denied or restricted"])
+                    self.locationError = NSError(
+                        domain: "LocationError",
+                        code: 1,
+                        userInfo: [NSLocalizedDescriptionKey: "Location access denied or restricted"])
                 @unknown default:
-                    // Handle any future cases that may be added
-                    self.locationError = NSError(domain: "LocationError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Unknown authorization status"])
+                    self.locationError = NSError(
+                        domain: "LocationError",
+                        code: 1,
+                        userInfo: [NSLocalizedDescriptionKey: "Unknown authorization status"])
                 }
             } else {
-                self.locationError = NSError(domain: "LocationError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Location services are not enabled"])
+                self.locationError = NSError(
+                    domain: "LocationError",
+                    code: 1,
+                    userInfo: [NSLocalizedDescriptionKey: "Location services are not enabled"])
             }
         }
     }
@@ -66,14 +73,18 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         case .authorizedWhenInUse, .authorizedAlways:
             self.startUpdatingLocation()
         case .denied, .restricted:
-            // Handle case where location access is denied or restricted
-            self.locationError = NSError(domain: "LocationError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Location access denied or restricted"])
+            self.locationError = NSError(
+                domain: "LocationError",
+                code: 1,
+                userInfo: [NSLocalizedDescriptionKey: "Location access denied or restricted"])
         case .notDetermined:
-            // Do nothing, will be handled in startUpdatingLocation
             break
         @unknown default:
             // Handle any future cases that may be added
-            self.locationError = NSError(domain: "LocationError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Unknown authorization status"])
+            self.locationError = NSError(
+                domain: "LocationError",
+                code: 1,
+                userInfo: [NSLocalizedDescriptionKey: "Unknown authorization status"])
         }
     }
 }

@@ -67,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D4023E0B2C2476740034DFC8 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		D4365FB22C187743005B7A4A /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		D4365FB42C18790E005B7A4A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		D4365FBC2C18BB3F005B7A4A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -210,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				D4B8094E2BC17E59008987FB /* README.md */,
+				D4023E0B2C2476740034DFC8 /* CONTRIBUTING.md */,
 				D4FE4A332BB20059001B7AC9 /* Vizor */,
 				D4FE4A462BB2005B001B7AC9 /* VizorTests */,
 				D4FE4A502BB2005B001B7AC9 /* VizorUITests */,

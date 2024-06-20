@@ -183,8 +183,12 @@ struct Feed: View {
                                     if (showingHeader && newValue > oldValue) || (!showingHeader && newValue < oldValue) {
                                         turningPoint = newValue
                                     }
-                                    if (showingHeader && (turningPoint - newValue) > thresholdScrollDistance) ||
-                                        (!showingHeader && (newValue - turningPoint) > thresholdScrollDistance) {
+                                    if (showingHeader && 
+                                        (turningPoint - newValue) >
+                                        thresholdScrollDistance) ||
+                                        (!showingHeader && 
+                                         (newValue - turningPoint) >
+                                         thresholdScrollDistance) {
                                         showingHeader = newValue > turningPoint
                                     }
                                 }

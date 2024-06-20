@@ -20,7 +20,11 @@ final class FirebaseStorageManager {
         let imagesRef = storageRef.child("images/\(UUID().uuidString).jpg")
         
         guard let imageData = image.jpegData(compressionQuality: 0.75) else {
-            completion(.failure(NSError(domain: "ImageConversion", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to convert image to data."])))
+            completion(.failure(NSError(
+                domain: "ImageConversion",
+                code: -1, 
+                userInfo: [NSLocalizedDescriptionKey: "Failed to convert image to data."]
+            )))
             return
         }
         
@@ -37,7 +41,11 @@ final class FirebaseStorageManager {
                 }
                 
                 guard let downloadURL = url?.absoluteString else {
-                    completion(.failure(NSError(domain: "DownloadURL", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to get download URL."])))
+                    completion(.failure(NSError(
+                        domain: "DownloadURL",
+                        code: -1,
+                        userInfo: [NSLocalizedDescriptionKey: "Failed to get download URL."]
+                    )))
                     return
                 }
                 

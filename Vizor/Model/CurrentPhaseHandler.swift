@@ -12,7 +12,9 @@ func updateCurrentPhase(for coordinate: CLLocationCoordinate2D?) -> String {
     guard let coordinate = coordinate else {
         return "Unknown"
     }
-    let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+    let location = CLLocation(
+        latitude: coordinate.latitude,
+        longitude: coordinate.longitude)
     return calculatePhase(for: location)
 }
 

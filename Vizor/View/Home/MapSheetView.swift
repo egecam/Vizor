@@ -24,12 +24,20 @@ struct MapSheetView: View {
                     .padding()
                 
                 VStack {
-                    Map(coordinateRegion: .constant(MKCoordinateRegion(center: locationManager.userLocation?.coordinate ?? CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))), showsUserLocation: true)
-                        .frame(width: 350, height: 350)
-                        .clipShape(RoundedRectangle(cornerRadius: 18.0))
-                        .mapControls {
-                            MapUserLocationButton()
-                        }
+                    Map(coordinateRegion: .constant(
+                        MKCoordinateRegion(
+                            center: locationManager.userLocation?.coordinate ?? CLLocationCoordinate2D(
+                                latitude: 37.7749,
+                                longitude: -122.4194),
+                            span: MKCoordinateSpan(
+                                latitudeDelta: 0.05,
+                                longitudeDelta: 0.05))),
+                        showsUserLocation: true)
+                    .frame(width: 350, height: 350)
+                    .clipShape(RoundedRectangle(cornerRadius: 18.0))
+                    .mapControls {
+                        MapUserLocationButton()
+                    }
                     
                     
                     Button {

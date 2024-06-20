@@ -22,7 +22,6 @@ final class AuthenticationManager {
     static let shared = AuthenticationManager()
     private init() { }
     
-    // Oturum açmış bir kullanıcı varsa AuthDataResultModel döndürür, yoksa nil döndürür
     func getAuthenticatedUser() throws -> AuthDataResultModel? {
         guard let user = Auth.auth().currentUser else {
             return nil
