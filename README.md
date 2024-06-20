@@ -64,10 +64,6 @@ Vizor follows the Model-View-ViewModel (MVVM) pattern.
 
 - **Location Manager**: Manages location authorization and user's location calculations.
 
-### Views
-
-- **Home View**: Displays an overview of the current phase and a list of upcoming phases.
-
 ## Contributing
 
 Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) for more details.
