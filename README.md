@@ -64,6 +64,15 @@ Vizor follows the Model-View-ViewModel (MVVM) pattern.
 
 - **Location Manager**: Manages location authorization and user's location calculations.
 
+## Screenshots
+
+### Home
+![Untitled-1](https://github.com/egecam/Vizor/assets/23506587/83656b18-4a9c-45e1-80c6-ed1cdced987d)
+
+### Feed
+![feed](https://github.com/egecam/Vizor/assets/23506587/6c4931e4-e09e-4a2d-aad4-642e9caf14b9)
+
+
 ## Contributing
 
 Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) for more details.
